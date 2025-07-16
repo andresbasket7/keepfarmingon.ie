@@ -1,71 +1,63 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
-		<title>SoundAdvice</title>
-		<meta name="keywords" > 
-		<meta name="description" >
-		<meta name="author" content="Henna">		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-	
-		<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Arimo:400,700|Open+Sans">	
-		<link rel="stylesheet" type="text/css" media="all" href="css/flexslider.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Keep Farming On</title>
+	<meta name="description" content="Supporting sustainable and innovative Irish agriculture. Find resources, news, and insights for the future of farming in Ireland at KeepFarmingOn.ie.">
+	<!-- Favicon -->
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Arimo:400,700|Open+Sans">	
+	<link rel="stylesheet" type="text/css" media="all" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
 		
 </head>
 <body>
 
 	<header>
 		<div class="container">
-			<div  class="left">
-				<h1  style="font-weight:600;font-size:30px;">KEEP<span class="colour">FARMING</span>ON.IE</h1><span class="colour1">For Family Farm Success</span>
-			</div>
-			<nav>
-				<ul>
-					<li class="colour1"><a href="#slider">Home</a></li>
-					<!--<li><a href="#What">What</a></li>
-					<li><a href="#Why">Why</a></li>
-					<li><a href="#When">When</a></li>
-					<li><a href="#Where">Where</a></li>
-					<li><a href="#How">How</a></li>
-					<li><a href="#who">Who</a></li>-->
-					<li class="colour1"><a href="#get-in-touch">Contact</a></li>
-				</ul>
-			</nav>
-			<div class="main-menu-select">
-				<select>
-					<option value="#slider" selected>Home</option>
-<!--<option value="#What">What</option>
-					<option value="#Why">Why</option>
-					<option value="#When">When</option>
-					<option value="#Where">Where</option>
-					<option value="#How">How</option>
-					<option value="#who">Who</option> -->
-					<option value="#get-in-touch">Contact</option>
-				</select>
-			</div>
+		
+		<!-- LOGO -->
+   		 <a href="index.html" class="logo">
+      	<img src="images/Keepfarmingon.png" alt="Keep Farming On Logo" />
+    	</a>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Book1</a></li>
+				<li><a href="#">Book2</a></li>
+				<li><a href="#">FAQs</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Resources</a></li>
+      		</ul>
+		</nav>
+		
 		</div>
 	</header>
 
-	<section id="slider">
-	    <div class="flexslider">
-	        <ul class="slides">
-	            <li class="slide">
-	               <img src="images/GATE2.jpg" alt="">
-	            </li>
-	            <li class="slide">
-	                <img src="images/sliding3.jpg" alt="">
-	            </li>
-	            <li class="slide">
-	                <img src="images/sliderfamily.jpg" alt="">
-	            </li>
-	        </ul> 
-	    </div>
+	<!-- HERO -->
+	<section class="hero-slider">
+		<div class="slide active" style="background-image: url('images/slide1.jpg');"></div>
+		<div class="slide" style="background-image: url('images/slide2.jpg');"></div>
+		<div class="slide" style="background-image: url('images/SLIDE4.jpg');"></div>
+
+		<div class="hero-overlay">
+			<div class="hero-content">
+				<h1>PRESSURE ON FAMILY FARMS</h1>
+				<p>Grandparents, parents and their sons and daughters working together</p>
+			</div>
+		</div>
 	</section>
 
 	<section id="What" class="clearfix">
@@ -288,5 +280,6 @@ please do so by, email or telephone.</div>
 	<script src="js/retina.js"></script>
 	<script data-cfasync="false" type="text/javascript"
 src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>
