@@ -768,11 +768,10 @@ header {
 /*-----------------------------------------------------------------*/
 
 .challenges-section {
-	background-color: #556B2F;
+	background-color: #577E19;
 	padding: 60px 20px;
 	padding-top: 50px;
 	color: #fff;
-	/* Texto blanco */
 	text-align: center;
 	font-family: Arial, sans-serif;
 }
@@ -975,6 +974,140 @@ header {
 }
 
 
+/*-----------------------------------------------------------------*/
+/* 10. Footer
+/*-----------------------------------------------------------------*/
+.footer {
+  background-color: #2C3E50;
+  color: white;
+  padding: 20px;
+  padding-bottom: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 22%;
+  margin: 10px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-column p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin-top: 15px;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+
+/*-----------------------------------------------------------------*/
+/* -1- CONTACT.html
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/* 04. HERO
+/*-----------------------------------------------------------------*/
+
+/* Imagen de fondo borrosa */
+.blur-background-section-pages {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 100px 20px;
+	overflow: hidden;
+	min-height: 500px;
+}
+
+.blur-background-section-pages::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	z-index: 0;
+	opacity: 0.7;
+}
+
+
+/*-----------------------------------------------------------------*/
+/* 04. Contact info
+/*-----------------------------------------------------------------*/
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f5ed;
+}
+
+.contact-box {
+  display: flex;
+  align-items: flex-start;
+  max-width: 280px;
+  align-items: center;
+}
+
+.contact-box .icon {
+  font-size: 60px;
+  color: #577E19; 
+  margin-right: 15px;
+  min-width: 30px;
+  margin-top: 5px;
+}
+
+.contact-box .text p {
+  margin: 0;
+  color: #002D4C;
+  line-height: 1.5;
+}
+
+.contact-box .text a {
+  color: #002D4C;
+  text-decoration: none;
+}
+
+.contact-box .text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box {
+    justify-content: center;
+  }
+}
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
 /*-------------------*/
 /* Section: Get In Touch */
 /*-------------------*/
@@ -1089,139 +1222,124 @@ button#contact-submit:hover {
     width: 100%;
   }
 }
+
+
 /*-----------------------------------------------------------------*/
-/* 10. Footer
+/* -1- About-us.html
 /*-----------------------------------------------------------------*/
-.footer {
-  background-color: #2C3E50;
-  color: white;
+
+.about-section-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  margin-bottom: 0;
   padding: 20px;
-  padding-bottom: 40px;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+.about-section-content .about-text {
+  margin-bottom: 60px;
 }
 
-.footer-column {
-  flex: 1 1 22%;
-  margin: 10px;
-  min-width: 200px;
+.about-text ul {
+	font-size: 18px;
+}
+.about-section-content h2 {
+  font-size: 30px;
+  color: #006600;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.about-section-content h3 {
+  font-size: 24px;
+  color: #006600;
+  margin-bottom: 15px;
+}
+
+.about-section-content p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.about-section-content ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.about-section-content .about-image {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.about-section-content .about-image img {
+  width: 240px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-section-content .image-caption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
   text-align: center;
 }
 
-.footer-column p {
-  margin: 8px 0;
-  line-height: 1.5;
+.websites ul{
+	color: #526271;
+	font-size: 14px;
 }
 
-.footer-column a {
-  color: #fff;
-  text-decoration: underline;
-}
+/* Certifications */
 
-.footer-logo {
-  margin-top: 15px;
-  max-width: 120px;
-  height: auto;
-}
-
-/* Font Awesome for icons */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
-
-/*-----------------------------------------------------------------*/
-/* -1- CONTACT.html
-/*-----------------------------------------------------------------*/
-
-/*-----------------------------------------------------------------*/
-/* 04. HERO
-/*-----------------------------------------------------------------*/
-
-/* Imagen de fondo borrosa */
-.blur-background-section-contact {
-	position: relative;
-	background-image: url('../images/how1.gif');
-	/* tu imagen */
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	padding: 100px 20px;
-	overflow: hidden;
-	min-height: 500px;
-}
-
-.blur-background-section-contact::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	z-index: 0;
-	opacity: 0.7;
-}
-
-
-/*-----------------------------------------------------------------*/
-/* 04. Contact info
-/*-----------------------------------------------------------------*/
-
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-  justify-content: center;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
+#certifications {
+  padding: 60px 20px;
   background-color: #f8f5ed;
 }
 
-.contact-box {
+.cert-container {
   display: flex;
-  align-items: flex-start;
-  max-width: 280px;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cert-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-height: 200px; 
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+}
+
+.cert-column img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
   align-items: center;
 }
 
-.contact-box .icon {
-  font-size: 60px;
-  color: #2E7D32; /* Vino oscuro */
-  margin-right: 15px;
-  min-width: 30px;
-  margin-top: 5px;
-}
-
-.contact-box .text p {
+.cert-column p {
+  font-size: 16px;
+  color: #555;
   margin: 0;
-  color: #002D4C;
-  line-height: 1.5;
 }
 
-.contact-box .text a {
-  color: #002D4C;
-  text-decoration: none;
+.btn-contact-2 {
+	text-align: center;
+	padding-bottom: 40px;
 }
-
-.contact-box .text a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-box {
-    justify-content: center;
-  }
-}
-
-/* Font Awesome */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
