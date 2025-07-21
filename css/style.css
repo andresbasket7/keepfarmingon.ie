@@ -1137,7 +1137,6 @@ header {
 /*-------------------*/
 #get-in-touch {
 	padding: 100px 20px;
-	background: url("../images/get-in-touch.png") no-repeat center top;
 	background-size: cover;
 	border-bottom: none;
 	color: #333;
@@ -1225,11 +1224,15 @@ button#contact-submit:hover {
 	background-color: #5a981f;
 }
 
-.thankyou_message {
+.thankyou_message,
+.loading_message {
 	margin-top: 20px;
 	text-align: center;
 	color: #4CAF50;
+	font-size: 20px;
 }
+
+
 
 .btn-container-right {
 	text-align: right;
