@@ -89,6 +89,7 @@
         min-height: 300px;
     }
 
+
     /* Timeline */
     .timeline-line {
         left: 20px; /* Move timeline line to the left for tablets */
@@ -293,7 +294,6 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow for phones */
         min-height: auto; /* Allow height to adjust based on content */
         height: auto;
-        padding-bottom: 15px; /* Add some bottom padding */
     }
     .info-card h3 {
         padding: 15px 15px 5px 15px; /* Adjust padding for title */
