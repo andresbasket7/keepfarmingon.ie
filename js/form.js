@@ -5,15 +5,24 @@ window.addEventListener("DOMContentLoaded", function () {
   const companyDetails = document.getElementById("company-details");
 
   if (!form) {
-    console.error("No se encontró el formulario con ID 'gform'");
+    console.error("Form with ID 'gform' not found");
     return;
   }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Mostrar mensaje de cargando
+    // Show loading message
     loadingMessage.style.display = "block";
+
+    // Validate reCAPTCHA before sending
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (recaptchaResponse.length === 0) {
+      loadingMessage.style.display = "none"; // Hide loading message
+      alert("Please verify that you are not a robot by checking the reCAPTCHA.");
+      return; // Stop form submission
+    }
 
     const formData = new FormData(form);
 
@@ -23,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json())
       .then((data) => {
-        loadingMessage.style.display = "none"; // Oculta el "cargando"
+        loadingMessage.style.display = "none";
         if (data.result === "success") {
           form.reset();
           form.style.display = "none";
@@ -34,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch((error) => {
-        loadingMessage.style.display = "none"; // Oculta el "cargando"
+        loadingMessage.style.display = "none";
         console.error("Error:", error);
         alert("An unexpected error occurred. Please try again.");
       });

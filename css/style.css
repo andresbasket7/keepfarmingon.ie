@@ -1182,7 +1182,7 @@ header {
 }
 
 #company-details a {
-	color: #76BB2C;
+	color: #577E19;
 	text-decoration: none;
 }
 
@@ -1210,7 +1210,7 @@ header {
 }
 
 button#contact-submit {
-	background-color: #76BB2C;
+	background-color: #577E19;
 	color: white;
 	padding: 12px 24px;
 	font-size: 16px;
@@ -1221,14 +1221,14 @@ button#contact-submit {
 }
 
 button#contact-submit:hover {
-	background-color: #5a981f;
+	background-color: #577E19;
 }
 
 .thankyou_message,
 .loading_message {
 	margin-top: 20px;
 	text-align: center;
-	color: #4CAF50;
+	color: #577E19;
 	font-size: 20px;
 }
 
