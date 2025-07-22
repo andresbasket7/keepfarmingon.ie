@@ -769,24 +769,6 @@ header {
 	color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-	.timeline-step {
-		flex-direction: column;
-	}
-
-	.timeline-content {
-		width: 90%;
-		text-align: center;
-	}
-
-	.timeline-content.left,
-	.timeline-content.right {
-		margin: 0 auto;
-	}
-}
-
-
 /*-----------------------------------------------------------------*/
 /* 08. Section Challenges
 /*-----------------------------------------------------------------*/
@@ -985,19 +967,6 @@ header {
 	display: block;
 }
 
-@media (max-width: 768px) {
-	.coaching-container {
-		grid-template-columns: 1fr;
-	}
-
-	.content-box,
-	.image-box {
-		height: auto;
-		max-width: 100%;
-	}
-}
-
-
 /*-----------------------------------------------------------------*/
 /* 10. Footer
 /*-----------------------------------------------------------------*/
@@ -1007,6 +976,7 @@ header {
 	padding: 20px;
 	padding-bottom: 40px;
 	font-family: Arial, sans-serif;
+	width: 100%;
 }
 
 .footer-container {
@@ -1117,18 +1087,6 @@ header {
 	text-decoration: underline;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-	.contact-info {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.contact-box {
-		justify-content: center;
-	}
-}
-
 /* Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
@@ -1236,18 +1194,6 @@ button#contact-submit:hover {
 
 .btn-container-right {
 	text-align: right;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-	#contact {
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	#contact .half {
-		width: 100%;
-	}
 }
 
 
