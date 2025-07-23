@@ -291,156 +291,149 @@ section>.container>p {
 /* 03. Header
 /*-----------------------------------------------------------------*/
 header {
-	width: 100%;
-	background: #f8f5ed;
-	padding: 20px 0;
-	text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  padding: 10px 0;
 }
 
-/*------ Contenedor centrado ------*/
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+/* Contenedor del logo y menú */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/*------ Logo centrado ------*/
-.logo {
-	display: block;
-	margin: 0 auto 15px auto;
-}
-
+/* Logo a la izquierda */
 .logo img {
-	max-height: 220px;
-	height: auto;
-	width: auto;
-	display: inline-block;
+  max-height: 90px;
+  width: auto;
+  height: auto;
 }
 
-/*------ Menú de navegación ------*/
-.main-nav {
-	display: flex;
-	justify-content: center;
-}
-
-/* Lista del menú con distribución uniforme */
+/* Menú alineado a la derecha */
 .main-nav ul {
-	width: 100%;
-	max-width: 1000px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
 }
 
-/* Cada ítem del menú */
-.main-nav ul li {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 60px;
-}
-
-/* Estilo de los enlaces */
 .main-nav ul li a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	text-decoration: none;
-	color: #5a9524;
-	font-size: 18px;
-	padding: 0 10px;
-	text-align: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 17px;
+  padding: 8px 5px;
+  transition: color 0.3s;
 }
 
-/* Hover efecto */
 .main-nav ul li a:hover {
-	color: #333333;
+  color: #333;
 }
 
-/*------ Ítem destacado (opcional) ------*/
-.main-nav ul li.highlight {
-	background: #76bb2c;
-	padding: 2px 15px;
-	border-radius: 30px;
-	border: 2px solid #adc98f;
-	color: #f8f5ed;
-	cursor: pointer;
-}
+/* HERO SLIDER (sin padding-top para que el header lo cubra) */
 
-.main-nav ul li.highlight:hover {
-	background: #67A327;
-}
-
-.main-nav ul li.highlight a {
-	color: #f8f5ed;
-}
-
-
-/*-----------------------------------------------------------------*/
-/* 04. HERO
-/*-----------------------------------------------------------------*/
 .hero-slider {
-	position: relative;
-	width: 100%;
-	height: 785px;
-	overflow: hidden;
-	padding-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 785px;
+  overflow: hidden;
+  padding-top: 0;
 }
 
-/* Fondo con imagen de fondo difuminada */
 .slide {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-	/* filter: brightness(1) blur(0.5px); */
-	transition: opacity 0.5s ease;
-	z-index: 1;
-	opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  opacity: 0;
+  animation: none;
 }
 
 .slide.active {
-	opacity: 1;
+  opacity: 1;
+  animation: zoomOut 5s ease-in-out forwards;
 }
 
-/* Capa oscura + contenido centrado */
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .hero-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-/* Texto */
 .hero-content {
-	color: #f8f5ed;
-	max-width: 800px;
+  color: #ffffff;
+  max-width: 800px;
 }
 
 .hero-content h1 {
-	font-size: 48px;
-	margin-bottom: 20px;
-	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
-	font-size: 22px;
-	line-height: 1.5;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  font-size: 22px;
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Cartel realista con marco colgado */
+.realistic-sign {
+  position: absolute;
+  bottom: 0; /* ⬅ esto hace que llegue hasta el fondo */
+  /* left: 0; */
+  width: 600px; /* ⬅ hazlo más grande */
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Marco de forja */
+.marco {
+  width: 100%;
+  display: block;
+}
+
+/* Imagen centrada dentro del marco */
+.in-frame {
+  position: absolute;
+  top: 49%;   /* AJUSTA fino con DevTools */
+  left: 50%;  /* AJUSTA fino con DevTools */
+  transform: translate(-50%, -50%);
+  width: 392px;   /* ⬅ hazla más grande */
+  height: 485px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -1028,7 +1021,7 @@ header {
 	background-attachment: fixed;
 	padding: 100px 20px;
 	overflow: hidden;
-	min-height: 500px;
+	min-height: 600px;
 }
 
 .blur-background-section-pages::before {

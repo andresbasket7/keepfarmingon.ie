@@ -6,34 +6,69 @@
 @media (max-width: 1024px) {
     /* Header */
     header {
-        padding: 15px 0; /* Slightly reduce header padding */
+        /* Asegura que el header sea absoluto para superponerse al hero */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background: transparent; /* Mantener transparente o poner un color si se necesita */
+        padding: 10px 0; /* Padding original o ligeramente ajustado */
+    }
+
+    .header-container {
+        padding: 0 10px; /* Reducir aún más el padding horizontal del contenedor */
     }
 
     .logo img {
-        max-height: 180px; /* Adjust logo size for tablets */
-        margin-bottom: 10px; /* Reduce space below logo */
+        max-height: 65px; /* Ligeramente más pequeño */
+    }
+
+    .main-nav ul {
+        gap: 10px; /* Reducir el espacio entre elementos del menú */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Permitir que los ítems salten de línea si no caben */
     }
 
     .main-nav ul li {
-        height: 50px; /* Slightly smaller menu items */
+        text-align: center; /* Centra el bloque de texto dentro del LI */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
     }
 
     .main-nav ul li a {
-        font-size: 16px; /* Smaller font size for menu links */
-        padding: 0 8px;
+        font-size: 13px; /* Tamaño de fuente aún más ajustado para tablets */
+        padding: 4px 6px; /* Ajustar padding para más espacio clicleable y evitar solapamiento */
+        line-height: 1.15; /* Reduce el espacio entre líneas si el texto se envuelve */
+        white-space: normal; /* Permitir que el texto se envuelva */
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero-slider {
-        height: 600px; /* Adjust hero height for tablets */
+        height: 550px; /* Ajustar altura */
+        padding-top: 0; /* Asegurar que no haya padding extra si el header es absoluto */
     }
 
     .hero-content h1 {
-        font-size: 40px; /* Smaller hero title */
+        font-size: 34px;
     }
 
     .hero-content p {
-        font-size: 20px; /* Smaller hero description */
+        font-size: 17px;
+    }
+
+    .realistic-sign {
+        width: 400px; /* Reducir el tamaño del cartel */
+        bottom: 0; /* Mantener abajo */
+        left: unset; /* Desactivamos cualquier 'left' previo si lo hubiera */
+    }
+
+    .in-frame {
+        width: 260px; /* Ajustar el tamaño de la imagen dentro del marco */
+        height: 320px;
     }
 
     /* General Sections */
@@ -174,59 +209,99 @@
 
     /* Header */
     header {
-        padding: 10px 0; /* Reduced padding for header */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: transparent;
+        padding: 6px 0; /* Menos padding vertical */
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 6px 0 6px; /* Reducir padding aún más */
     }
 
     .logo {
-        margin: 0 auto 10px auto; /* Adjust margin for logo */
+        margin-bottom: 6px; /* Menos espacio */
     }
 
     .logo img {
-        max-height: 120px; /* Significantly smaller logo on phones */
+        max-height: 40px; /* Más pequeño */
     }
 
     .main-nav {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center the stacked items */
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-top: 6px;
+        padding-bottom: 3px;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
     }
 
     .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: none;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0 0px;
+        align-items: stretch;
+        gap: 9px; /* Reducir aún más el espacio entre elementos */
+        box-sizing: border-box;
     }
 
     .main-nav ul li {
-        width: 100%;
-        height: 40px; /* Reduced height for menu items */
-        margin-bottom: 3px; /* Smaller spacing between stacked items */
-        justify-content: center; /* Ensure content is centered horizontally */
+        flex-shrink: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-width: 0; 
+        padding: 0 2px; /* Pequeño padding interno para los elementos del menú */
     }
 
     .main-nav ul li a {
-        font-size: 14px; /* Even smaller font size for menu links */
-        padding: 0 5px;
-        text-align: center; /* Ensure text is centered */
+        font-size: 9px; /* ¡Reducir drásticamente el tamaño de fuente! */
+        padding: 1px 1px; /* Mínimo padding */
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.0; /* Líneas muy juntas */
+        display: block;
     }
 
-    .main-nav ul li.highlight {
-        padding: 0 8px; /* Adjusted padding for highlight */
-        margin-top: 8px; /* Reduced space out the highlight button */
-    }
-
-    /* Hero Section */
+    /* Hero */
     .hero-slider {
-        height: 400px; /* Shorter hero section on phones */
+        height: 350px; /* Altura más reducida para móviles */
+        padding-top: 0; /* Asegurar que no haya padding extra si el header es absoluto */
+    }
+
+    .hero-overlay {
+        padding: 0 10px;
     }
 
     .hero-content h1 {
-        font-size: 28px; /* Even smaller hero title */
-        margin-bottom: 10px;
+        font-size: 24px;
+        margin-bottom: 8px;
     }
 
     .hero-content p {
-        font-size: 16px; /* Even smaller hero description */
+        font-size: 14px;
+    }
+
+    .realistic-sign {
+        width: 220px; /* Reducir más */
+        bottom: 0;
+        left: unset;
+    }
+
+    .in-frame {
+        width: 145px;
+        height: 180px;
     }
 
     /* Buttons */
