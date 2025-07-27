@@ -179,7 +179,7 @@
 
 	.timeline-line {
 		left: 20px;
-		top: 30px;
+		top: 60px;
 		bottom: 30px;
 	}
 
@@ -322,6 +322,20 @@
 
 	.about-section-content h3 {
 		font-size: 20px;
+	}
+
+
+/*-----------------------------------------------------------------*/
+/*  Contact Page
+/*-----------------------------------------------------------------*/
+
+	.blur-background-section-pages {
+		padding: 120px 40px;
+		min-height: 700px;
+	}
+
+	.hero-content h1 {
+		font-size: 3rem;
 	}
 }
 
@@ -722,64 +736,34 @@
 /*-----------------------------------------------------------------*/
 
 	.blur-background-section-pages {
-		padding: 40px 15px;
-		min-height: 250px;
+		background-position: center bottom; /* Enfoca la parte inferior */
+		background-attachment: scroll;      /* Mejora rendimiento y compatibilidad en móviles */
+		min-height: 500px;                  /* Opcional: reduce altura para pantallas pequeñas */
+		padding: 80px 15px;
 	}
 
 	.contact-info {
-		flex-direction: column;
+		justify-content: center;
 		gap: 20px;
-		padding: 25px 15px;
+		padding: 30px 15px;
 	}
 
 	.contact-box {
-		max-width: 100%;
-		text-align: center;
+		flex: 1 1 calc(50% - 20px); /* Dos por fila, con espacio entre */
+		max-width: calc(50% - 20px);
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 	}
 
 	.contact-box .icon {
-		font-size: 40px;
-		margin-bottom: 8px;
+		font-size: 50px;
+		margin: 0 0 10px 0;
 	}
 
-	.contact-box .text p {
-		font-size: 14px;
-	}
-
-	#get-in-touch {
-		padding: 40px 15px;
-	}
-
-	#get-in-touch h2 {
-		font-size: 22px;
-	}
-
-	#get-in-touch p {
-		font-size: 15px;
-	}
-
-	#contact {
-		margin-top: 20px;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	#gform input.input,
-	#gform textarea.textarea {
-		padding: 8px;
-		font-size: 14px;
-	}
-
-	button#contact-submit {
-		padding: 8px 16px;
-		font-size: 14px;
-	}
-
-	.thankyou_message,
-	.loading_message {
-		font-size: 16px;
+	.contact-box .text p,
+	.contact-box .text a {
+		font-size: 1rem;
 	}
 
 /*-----------------------------------------------------------------*/
@@ -810,6 +794,7 @@
 	.cert-container {
 		flex-direction: column;
 		gap: 20px;
+		align-items: center;
 	}
 
 	.cert-column {
@@ -917,5 +902,9 @@
 
 	.timeline-line {
 		bottom: 160px;
+	}
+
+	.about-section-content h2 {
+	font-size: 18px;
 	}
 }
