@@ -2,631 +2,757 @@
 /* Responsive Design
 /*-----------------------------------------------------------------*/
 
-/* Medium devices (tablets, 768px and up) */
+/*-----------------------------------------------------------------*/
+/* Medium devices (tablets, 768px and up)
+/*-----------------------------------------------------------------*/
+
 @media (max-width: 1024px) {
-    /* Header */
-    header {
-        /* Asegura que el header sea absoluto para superponerse al hero */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        background: transparent; /* Mantener transparente o poner un color si se necesita */
-        padding: 10px 0; /* Padding original o ligeramente ajustado */
-    }
 
-    .header-container {
-        padding: 0 10px; /* Reducir aún más el padding horizontal del contenedor */
-    }
+	/*-----------------------------------------------------------------*/
+	/* 01. Header
+/*-----------------------------------------------------------------*/
 
-    .logo img {
-        max-height: 65px; /* Ligeramente más pequeño */
-    }
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		background: transparent;
+		padding: 10px 0;
+	}
 
-    .main-nav ul {
-        gap: 10px; /* Reducir el espacio entre elementos del menú */
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; /* Permitir que los ítems salten de línea si no caben */
-    }
+	.header-container {
+		padding: 0 10px;
+	}
 
-    .main-nav ul li {
-        text-align: center; /* Centra el bloque de texto dentro del LI */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-    }
+	.logo img {
+		max-height: 65px;
+	}
 
-    .main-nav ul li a {
-        font-size: 13px; /* Tamaño de fuente aún más ajustado para tablets */
-        padding: 4px 6px; /* Ajustar padding para más espacio clicleable y evitar solapamiento */
-        line-height: 1.15; /* Reduce el espacio entre líneas si el texto se envuelve */
-        white-space: normal; /* Permitir que el texto se envuelva */
-    }
+	.main-nav ul {
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
-    /* Hero */
-    .hero-slider {
-        height: 550px; /* Ajustar altura */
-        padding-top: 0; /* Asegurar que no haya padding extra si el header es absoluto */
-    }
+	.main-nav ul li {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: auto;
+	}
 
-    .hero-content h1 {
-        font-size: 34px;
-    }
+	.main-nav ul li a {
+		font-size: 13px;
+		padding: 4px 6px;
+		line-height: 1.15;
+		white-space: normal;
+	}
 
-    .hero-content p {
-        font-size: 17px;
-    }
+	/*-----------------------------------------------------------------*/
+	/* 02. Hero
+/*-----------------------------------------------------------------*/
+	.hero-slider {
+		height: 550px;
+		padding-top: 0;
+	}
 
-    .realistic-sign {
-        width: 400px; /* Reducir el tamaño del cartel */
-        bottom: 0; /* Mantener abajo */
-        left: unset; /* Desactivamos cualquier 'left' previo si lo hubiera */
-    }
+	.hero-content h1 {
+		font-size: 34px;
+	}
 
-    .in-frame {
-        width: 260px; /* Ajustar el tamaño de la imagen dentro del marco */
-        height: 320px;
-    }
+	.hero-content p {
+		font-size: 17px;
+	}
 
-    /* General Sections */
-    .container {
-        padding: 0 15px; /* Reduce padding for smaller screens */
-        max-width: 100%; /* Allow container to take full width on tablets */
-    }
+	.realistic-sign {
+		width: 400px;
+		bottom: 0;
+		left: unset;
+	}
 
-    .section-container,
-    .content-container,
-    .farm-container,
-    .coaching-container,
-    .footer-container,
-    #contact {
-        padding: 0 15px; /* Reduce padding for smaller screens */
-    }
+	.in-frame {
+		width: 260px;
+		height: 320px;
+	}
 
-    .main-title,
-    .section-title,
-    .section-title2,
-    .timeline-title,
-    .challenges-container h2,
-    .farm-title {
-        font-size: 28px; /* Adjust main titles */
-    }
+	/* General Sections */
+	.container {
+		padding: 0 15px;
+		max-width: 100%;
+	}
 
-    .description,
-    .description-list,
-    .section-text-card,
-    .challenges-container p,
-    .farm-text,
-    .content-box p,
-    .content-box ul,
-    .about-section-content p,
-    .about-section-content ul,
-    .cert-column p {
-        font-size: 16px; /* Adjust general text size */
-    }
+	.section-container,
+	.content-container,
+	.farm-container,
+	.coaching-container,
+	.footer-container,
+	#contact {
+		padding: 0 15px;
+	}
 
-    /* Blur Section */
-    .blur-background-section {
-        padding: 80px 15px;
-    }
+	.main-title,
+	.section-title,
+	.section-title2,
+	.timeline-title,
+	.challenges-container h2,
+	.farm-title {
+		font-size: 28px;
+	}
 
-    .content-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns for content */
-        gap: 30px;
-    }
+	.description,
+	.description-list,
+	.section-text-card,
+	.challenges-container p,
+	.farm-text,
+	.content-box p,
+	.content-box ul,
+	.about-section-content p,
+	.about-section-content ul,
+	.cert-column p {
+		font-size: 16px;
+	}
 
-    .info-card {
-        width: 100%; /* Make info cards take full width if needed */
-        height: auto;
-        min-height: 300px;
-    }
+	.section-container {
+		padding: 10px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 03. Blur Section
+/*-----------------------------------------------------------------*/
+
+	.blur-background-section {
+		padding: 80px 15px;
+	}
+
+	.content-container {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 30px;
+		place-items: center;
+	}
+
+	.section-title,
+	.section-title2 {
+		font-size: 28px;
+		margin-bottom: 50px;
+	}
+
+	.section-text-card {
+		padding: 20px;
+		margin: 30px auto;
+		font-size: 17px;
+	}
+
+	.info-card {
+		width: 100%;
+		max-width: 500px;
+		height: 380px;
+		/* MISMA ALTURA QUE EN ESCRITORIO */
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+		border-radius: 12px;
+	}
+
+	.info-card h3 {
+		font-size: 18px;
+		padding: 20px 20px 10px 20px;
+	}
+
+	.info-card p {
+		font-size: 15px;
+		padding: 0 20px 20px 20px;
+	}
+
+	.info-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+	}
 
 
-    /* Timeline */
-    .timeline-line {
-        left: 20px; /* Move timeline line to the left for tablets */
-        top: 30px;
-        bottom: 30px;
-    }
+	/*-----------------------------------------------------------------*/
+	/* 04. Timeline
+/*-----------------------------------------------------------------*/
 
-    .timeline-icon {
-        left: 20px; /* Move icons to align with line */
-        transform: translateX(-50%);
-    }
+	.timeline-line {
+		left: 20px;
+		top: 30px;
+		bottom: 30px;
+	}
 
-    .timeline-content {
-        width: calc(100% - 70px); /* Adjust content width */
-        margin-left: 60px; /* Make space for the line and icon */
-        text-align: left; /* Align text to the left */
-        padding: 15px;
-    }
+	.timeline-icon {
+		left: 20px;
+		transform: translateX(-50%);
+	}
 
-    .timeline-content.left,
-    .timeline-content.right {
-        margin-left: 60px;
-        margin-right: 0;
-        text-align: left;
-    }
+	.timeline-content {
+		width: calc(100% - 70px);
+		margin-left: 60px;
+		text-align: left;
+		padding: 15px;
+	}
 
-    .timeline-content h3,
-    .timeline-content p {
-        text-align: left; /* Align timeline text left */
-    }
+	.timeline-content.left,
+	.timeline-content.right {
+		margin-left: 60px;
+		margin-right: 0;
+		text-align: left;
+	}
 
-    /* Coaching Section */
-    .coaching-container {
-        grid-template-columns: 1fr; /* Stack coaching boxes vertically */
-        gap: 50px;
-    }
+	.timeline-content h3,
+	.timeline-content p {
+		text-align: left;
+	}
 
-    .content-box,
-    .image-box {
-        max-width: 100%;
-        height: auto;
-        min-height: 300px;
-    }
+	/* Coaching Section */
+	.coaching-container {
+		grid-template-columns: 1fr;
+		gap: 50px;
+	}
 
-    /* Footer */
-    .footer-column {
-        flex: 1 1 45%; /* Two columns for footer on tablets */
-    }
+	.content-box,
+	.image-box {
+		max-width: 100%;
+		height: auto;
+		min-height: 300px;
+	}
 
-    /* Contact Page */
-    .contact-info {
-        gap: 40px;
-    }
+	/* Footer */
+	.footer-column {
+		flex: 1 1 45%;
+	}
 
-    .contact-box {
-        max-width: 350px;
-    }
+	/* Contact Page */
+	.contact-info {
+		gap: 40px;
+	}
 
-    #contact .half {
-        flex: 1 1 100%; /* Stack contact form and details vertically */
-    }
+	.contact-box {
+		max-width: 350px;
+	}
 
-    #company-details {
-        margin-bottom: 30px;
-    }
+	#contact .half {
+		flex: 1 1 100%;
+	}
 
-    .about-section-content h2 {
-        font-size: 26px;
-    }
+	#company-details {
+		margin-bottom: 30px;
+	}
 
-    .about-section-content h3 {
-        font-size: 20px;
-    }
+	.about-section-content h2 {
+		font-size: 26px;
+	}
+
+	.about-section-content h3 {
+		font-size: 20px;
+	}
 }
 
-/* Small devices (phones, 600px and down) */
+/*-----------------------------------------------------------------*/
+/* Small devices (phones, 600px and down)
+/*-----------------------------------------------------------------*/
+
+
 @media (max-width: 767px) {
-    body, html {
-        overflow-x: hidden; /* Prevent horizontal scroll on very small screens */
-        width: 100%; /* Ensure body and html take full width */
-    }
-
-    /* Header */
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        background-color: transparent;
-        padding: 6px 0; /* Menos padding vertical */
-    }
-
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 6px 6px 0 6px; /* Reducir padding aún más */
-    }
-
-    .logo {
-        margin-bottom: 6px; /* Menos espacio */
-    }
-
-    .logo img {
-        max-height: 40px; /* Más pequeño */
-    }
-
-    .main-nav {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        margin-top: 6px;
-        padding-bottom: 3px;
-    }
-
-    .main-nav::-webkit-scrollbar {
-        display: none;
-    }
-
-    .main-nav ul {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        padding: 0 0px;
-        align-items: stretch;
-        gap: 9px; /* Reducir aún más el espacio entre elementos */
-        box-sizing: border-box;
-    }
-
-    .main-nav ul li {
-        flex-shrink: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        min-width: 0; 
-        padding: 0 2px; /* Pequeño padding interno para los elementos del menú */
-    }
-
-    .main-nav ul li a {
-        font-size: 9px; /* ¡Reducir drásticamente el tamaño de fuente! */
-        padding: 1px 1px; /* Mínimo padding */
-        white-space: normal;
-        word-break: break-word;
-        line-height: 1.0; /* Líneas muy juntas */
-        display: block;
-    }
-
-    /* Hero */
-    .hero-slider {
-        height: 350px; /* Altura más reducida para móviles */
-        padding-top: 0; /* Asegurar que no haya padding extra si el header es absoluto */
-    }
-
-    .hero-overlay {
-        padding: 0 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-        margin-bottom: 8px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    .realistic-sign {
-        width: 220px; /* Reducir más */
-        bottom: 0;
-        left: unset;
-    }
-
-    .in-frame {
-        width: 145px;
-        height: 180px;
-    }
-
-    /* Buttons */
-    .btn-general {
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-
-    /* General Sections */
-    .section-container {
-        padding: 25px 10px;
-    }
-
-    /* Crucial for fixing the width issue */
-    .container {
-        max-width: 100%; /* Ensure container takes full width */
-        padding: 0 10px; /* Adjust padding for smaller screens */
-        box-sizing: border-box; /* Include padding in the element's total width and height */
-    }
-
-    .main-title,
-    .section-title,
-    .section-title2,
-    .timeline-title,
-    .challenges-container h2,
-    .farm-title {
-        font-size: 22px; /* Smaller main titles on phones */
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-
-    .description,
-    .description-list,
-    .section-text-card,
-    .challenges-container p,
-    .farm-text,
-    .content-box p,
-    .content-box ul,
-    .about-section-content p,
-    .about-section-content ul,
-    .cert-column p {
-        font-size: 14px; /* Smaller general text */
-    }
-
-    /* Blur Section */
-    .blur-background-section {
-        padding: 50px 10px;
-    }
-
-    .content-container {
-        grid-template-columns: 1fr; /* Single column for content cards */
-        gap: 15px;
-    }
-
-    .section-title, .section-title2 {
-        margin-bottom: 30px; /* Adjust spacing for titles */
-    }
-
-    .section-text-card {
-        padding: 15px;
-        margin: 15px auto;
-    }
-
-    .info-card {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow for phones */
-        min-height: auto; /* Allow height to adjust based on content */
-        height: auto;
-    }
-    .info-card h3 {
-        padding: 15px 15px 5px 15px; /* Adjust padding for title */
-    }
-    .info-card p {
-        padding: 0 15px 15px 15px; /* Adjust padding for paragraph */
-    }
-
-
-    /* Timeline */
-    .timeline-section {
-        padding: 30px 10px;
-    }
-
-    .timeline-line {
-        left: 20px; /* Keep line on left */
-    }
-
-    .timeline-step {
-        flex-direction: column; /* Stack icon and content vertically */
-        align-items: flex-start; /* Align content to the left */
-    }
-
-    .timeline-icon {
-        position: relative; /* Make icon flow with content */
-        left: auto;
-        transform: none;
-        margin-bottom: 8px; /* Space between icon and content */
-        width: 40px; /* Smaller icon */
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 40px); /* Adjust width for content */
-        margin-left: 40px; /* Indent content */
-        padding: 12px;
-        text-align: left;
-    }
-
-    .timeline-content h3 {
-        font-size: 18px;
-        padding-bottom: 10px;
-    }
-
-    .timeline-content p {
-        font-size: 14px;
-        margin: 0 10px;
-    }
-
-    .timeline-content.left,
-    .timeline-content.right {
-        margin-left: 40px;
-        margin-right: 0;
-        text-align: left;
-    }
-
-    /* Challenges Section */
-    .challenges-section {
-        padding: 30px 15px;
-    }
-
-    .challenges-images {
-        flex-direction: column; /* Stack images vertically */
-        gap: 15px;
-    }
-
-    .challenges-images img {
-        width: 100%; /* Images take full width */
-    }
-
-    /* Change Section */
-    .farm-change-section {
-        padding: 30px 15px;
-    }
-
-    .farm-text.highlight {
-        font-size: 16px; /* Adjust highlight text size */
-    }
-
-    /* Coaching Section */
-    #coaching-section {
-        padding: 25px 15px;
-    }
-
-    .content-box,
-    .image-box {
-        padding: 15px;
-        min-height: 200px;
-    }
-
-    .content-box h2 {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .content-box p {
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-
-    .content-box li {
-        font-size: 14px;
-        margin-bottom: 6px;
-        padding-left: 18px;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 10px;
-        padding-bottom: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column; /* Stack footer columns vertically */
-        align-items: center;
-    }
-
-    .footer-column {
-        width: 100%;
-        margin: 8px 0;
-    }
-
-    .footer-logo {
-        max-width: 80px;
-    }
-
-    /* Contact Page */
-    .blur-background-section-pages {
-        padding: 40px 15px;
-        min-height: 250px;
-    }
-
-    .contact-info {
-        flex-direction: column; /* Stack contact boxes vertically */
-        gap: 20px;
-        padding: 25px 15px;
-    }
-
-    .contact-box {
-        max-width: 100%;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-box .icon {
-        font-size: 40px;
-        margin-bottom: 8px;
-    }
-
-    .contact-box .text p {
-        font-size: 14px;
-    }
-
-    #get-in-touch {
-        padding: 40px 15px;
-    }
-
-    #get-in-touch h2 {
-        font-size: 22px;
-    }
-
-    #get-in-touch p {
-        font-size: 15px;
-    }
-
-    #contact {
-        margin-top: 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    #gform input.input,
-    #gform textarea.textarea {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    button#contact-submit {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .thankyou_message,
-    .loading_message {
-        font-size: 16px;
-    }
-
-    /* About Us Page */
-    .about-section-content {
-        margin: 15px auto;
-        padding: 10px;
-    }
-
-    .about-section-content .about-text {
-        margin-bottom: 30px;
-    }
-
-    .about-section-content h2 {
-        font-size: 20px;
-    }
-
-    .about-section-content h3 {
-        font-size: 16px;
-    }
-
-    .about-section-content p {
-        font-size: 14px;
-    }
-
-    .cert-container {
-        flex-direction: column; /* Stack certifications */
-        gap: 20px;
-    }
-
-    .cert-column {
-        padding: 10px;
-    }
+
+	/*-----------------------------------------------------------------*/
+	/* 01. Header
+/*-----------------------------------------------------------------*/
+
+	body,
+	html {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		background-color: transparent;
+		padding: 6px 0;
+		/* Menos padding vertical */
+	}
+
+	.header-container {
+		flex-direction: column;
+		align-items: center;
+		padding: 6px 6px 0 6px;
+	}
+
+	.logo {
+		margin-bottom: 6px;
+	}
+
+	.logo img {
+		max-height: 40px;
+	}
+
+	.main-nav {
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		margin-top: 6px;
+		padding-bottom: 3px;
+	}
+
+	.main-nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.main-nav ul {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		padding: 0 0px;
+		align-items: stretch;
+		gap: 9px;
+		/* Reducir aún más el espacio entre elementos */
+		box-sizing: border-box;
+	}
+
+	.main-nav ul li {
+		flex-shrink: 0;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: auto;
+		min-width: 0;
+		padding: 0 2px;
+		/* Pequeño padding interno para los elementos del menú */
+	}
+
+	.main-nav ul li a {
+		font-size: 9px;
+		padding: 1px 1px;
+		white-space: normal;
+		word-break: break-word;
+		line-height: 1.0;
+		display: block;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 02. Hero
+/*-----------------------------------------------------------------*/
+
+	/* Hero */
+	.hero-slider {
+		height: 350px;
+		padding-top: 0;
+	}
+
+	.hero-overlay {
+		padding: 0 10px;
+	}
+
+	.hero-content h1 {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+
+	.hero-content p {
+		font-size: 14px;
+	}
+
+	.realistic-sign {
+		width: 220px;
+		bottom: 0;
+		left: unset;
+	}
+
+	.in-frame {
+		width: 145px;
+		height: 180px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 03. Buttons
+/*-----------------------------------------------------------------*/
+
+	.section-container {
+		padding: 10px;
+	}
+
+	.btn-general {
+		padding: 10px 20px;
+		font-size: 15px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 04. General Sections
+/*-----------------------------------------------------------------*/
+
+	.section-container {
+		padding: 25px 10px;
+	}
+
+	/* Crucial for fixing the width issue */
+	.container {
+		max-width: 100%;
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+
+	.main-title,
+	.section-title,
+	.section-title2,
+	.timeline-title,
+	.challenges-container h2,
+	.farm-title {
+		font-size: 22px;
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+
+	.description,
+	.description-list,
+	.section-text-card,
+	.challenges-container p,
+	.farm-text,
+	.content-box p,
+	.content-box ul,
+	.about-section-content p,
+	.about-section-content ul,
+	.cert-column p {
+		font-size: 14px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 05. Blur Section
+/*-----------------------------------------------------------------*/
+
+	.blur-background-section {
+		padding: 50px 10px;
+	}
+
+	.content-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		place-items: center;
+	}
+
+	.section-title,
+	.section-title2 {
+		font-size: 24px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.section-title2 {
+		margin: 40px 0 20px 0;
+	}
+
+	.section-text-card {
+		padding: 15px;
+		margin: 20px auto;
+		font-size: 15px;
+		text-align: justify;
+	}
+
+	.info-card {
+		width: 100%;
+		max-width: 500px;
+		height: 290px;
+		/* MISMA ALTURA PARA TODAS LAS TARJETAS */
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+	}
+
+	.info-card h3 {
+		font-size: 16px;
+		padding: 15px 15px 5px 15px;
+	}
+
+	.info-card p {
+		font-size: 14px;
+		padding: 0 15px 15px 15px;
+		text-align: justify;
+	}
+
+	.info-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+
+	/*-----------------------------------------------------------------*/
+	/* 06. Timeline
+/*-----------------------------------------------------------------*/
+
+	.timeline-section {
+		padding: 30px 10px;
+	}
+
+	.timeline-line {
+		left: 20px;
+	}
+
+	.timeline-step {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.timeline-icon {
+		position: relative;
+		left: auto;
+		transform: none;
+		margin-bottom: 8px;
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+	}
+
+	.timeline-content {
+		width: calc(100% - 40px);
+		margin-left: 40px;
+		padding: 12px;
+		text-align: left;
+	}
+
+	.timeline-content h3 {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
+	.timeline-content p {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+
+	.timeline-content.left,
+	.timeline-content.right {
+		margin-left: 40px;
+		margin-right: 0;
+		text-align: left;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 07. Challenges Section
+/*-----------------------------------------------------------------*/
+
+	.challenges-section {
+		padding: 30px 15px;
+	}
+
+	.challenges-images {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.challenges-images img {
+		width: 100%;
+	}
+
+	.farm-change-section {
+		padding: 30px 15px;
+	}
+
+	.farm-text.highlight {
+		font-size: 16px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 08. Coaching Section
+/*-----------------------------------------------------------------*/
+
+	#coaching-section {
+		padding: 25px 15px;
+	}
+
+	.content-box,
+	.image-box {
+		padding: 15px;
+		min-height: 200px;
+	}
+
+	.content-box h2 {
+		font-size: 18px;
+		margin-bottom: 8px;
+	}
+
+	.content-box p {
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+
+	.content-box li {
+		font-size: 14px;
+		margin-bottom: 6px;
+		padding-left: 18px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 09. Footer
+/*-----------------------------------------------------------------*/
+	.footer {
+		padding: 10px;
+		padding-bottom: 20px;
+	}
+
+	.footer-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-column {
+		width: 100%;
+		margin: 8px 0;
+	}
+
+	.footer-logo {
+		max-width: 80px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/*  Contact Page
+/*-----------------------------------------------------------------*/
+
+	.blur-background-section-pages {
+		padding: 40px 15px;
+		min-height: 250px;
+	}
+
+	.contact-info {
+		flex-direction: column;
+		gap: 20px;
+		padding: 25px 15px;
+	}
+
+	.contact-box {
+		max-width: 100%;
+		text-align: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-box .icon {
+		font-size: 40px;
+		margin-bottom: 8px;
+	}
+
+	.contact-box .text p {
+		font-size: 14px;
+	}
+
+	#get-in-touch {
+		padding: 40px 15px;
+	}
+
+	#get-in-touch h2 {
+		font-size: 22px;
+	}
+
+	#get-in-touch p {
+		font-size: 15px;
+	}
+
+	#contact {
+		margin-top: 20px;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	#gform input.input,
+	#gform textarea.textarea {
+		padding: 8px;
+		font-size: 14px;
+	}
+
+	button#contact-submit {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+
+	.thankyou_message,
+	.loading_message {
+		font-size: 16px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* About Us Page
+/*-----------------------------------------------------------------*/
+
+	.about-section-content {
+		margin: 15px auto;
+		padding: 10px;
+	}
+
+	.about-section-content .about-text {
+		margin-bottom: 30px;
+	}
+
+	.about-section-content h2 {
+		font-size: 20px;
+	}
+
+	.about-section-content h3 {
+		font-size: 16px;
+	}
+
+	.about-section-content p {
+		font-size: 14px;
+	}
+
+	.cert-container {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.cert-column {
+		padding: 10px;
+	}
 }
 
-/* Extra extra small devices (even smaller phones, 375px and down) */
+/*-----------------------------------------------------------------*/
+/* Extra extra small devices (even smaller phones, 375px and down)
+/*-----------------------------------------------------------------*/
+
 @media (max-width: 375px) {
-    .logo img {
-        max-height: 100px; /* Even smaller logo for very small screens */
-    }
+	.logo img {
+		max-height: 100px;
+		/* Even smaller logo for very small screens */
+	}
 
-    .main-nav ul li a {
-        font-size: 13px; /* Smaller menu font */
-    }
+	.main-nav ul li a {
+		font-size: 13px;
+		/* Smaller menu font */
+	}
 
-    .hero-content h1 {
-        font-size: 24px;
-    }
+	.hero-content h1 {
+		font-size: 24px;
+	}
 
-    .hero-content p {
-        font-size: 14px;
-    }
+	.hero-content p {
+		font-size: 14px;
+	}
 
-    .main-title,
-    .section-title,
-    .section-title2,
-    .timeline-title,
-    .challenges-container h2,
-    .farm-title {
-        font-size: 20px;
-    }
+	.main-title,
+	.section-title,
+	.section-title2,
+	.timeline-title,
+	.challenges-container h2,
+	.farm-title {
+		font-size: 20px;
+	}
 
-    .description,
-    .description-list,
-    .section-text-card,
-    .challenges-container p,
-    .farm-text,
-    .content-box p,
-    .content-box ul,
-    .about-section-content p,
-    .about-section-content ul,
-    .cert-column p {
-        font-size: 13px;
-    }
+	.description,
+	.description-list,
+	.section-text-card,
+	.challenges-container p,
+	.farm-text,
+	.content-box p,
+	.content-box ul,
+	.about-section-content p,
+	.about-section-content ul,
+	.cert-column p {
+		font-size: 13px;
+	}
 }
