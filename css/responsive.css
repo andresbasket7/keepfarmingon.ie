@@ -718,7 +718,7 @@
 	}
 
 /*-----------------------------------------------------------------*/
-	/*  Contact Page
+/*  Contact Page
 /*-----------------------------------------------------------------*/
 
 	.blur-background-section-pages {
@@ -782,8 +782,8 @@
 		font-size: 16px;
 	}
 
-	/*-----------------------------------------------------------------*/
-	/* About Us Page
+/*-----------------------------------------------------------------*/
+/* About Us Page
 /*-----------------------------------------------------------------*/
 
 	.about-section-content {
@@ -845,6 +845,14 @@
 		font-size: 13px;
 	}
 
+	.main-nav ul li a {
+		font-size: 8px;
+		padding: 1px 1px;
+		white-space: normal;
+		word-break: break-word;
+		line-height: 1.0;
+		display: block;
+	}
 
 	.main-nav ul {
 		flex-wrap: nowrap;
@@ -855,6 +863,57 @@
 		/* Reducir aún más el espacio entre elementos */
 		box-sizing: border-box;
 	}
+
+	#coaching-section {
+    padding: 20px 10px;
+  }
+
+  .coaching-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-box,
+  .image-box {
+    padding: 12px;
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  .image-box {
+    padding: 0;
+    max-height: 220px;
+    overflow: hidden;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .content-box h2 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .content-box p {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .content-box li {
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-left: 18px;
+    line-height: 1.4;
+  }
 
 	.timeline-line {
 		bottom: 160px;
