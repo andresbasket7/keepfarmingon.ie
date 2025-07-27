@@ -30,6 +30,10 @@
 /*-----------------------------------------------------------------*/
 /* 01. CSS RESET
 /*-----------------------------------------------------------------*/
+
+/* Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
 html,
 body,
 div,
@@ -1001,9 +1005,6 @@ header {
 	height: auto;
 }
 
-/* Font Awesome for icons */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
 
 /*-----------------------------------------------------------------*/
 /* -1- CONTACT.html
@@ -1078,8 +1079,6 @@ header {
 	text-decoration: underline;
 }
 
-/* Font Awesome */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 /*-------------------*/
 /* Section: Get In Touch */
