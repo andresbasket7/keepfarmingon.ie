@@ -295,149 +295,174 @@ section>.container>p {
 /* 03. Header
 /*-----------------------------------------------------------------*/
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background: transparent;
-  padding: 10px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: transparent;
+	padding: 10px 0;
 }
 
 /* Contenedor del logo y menú */
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* Logo a la izquierda */
 .logo img {
-  max-height: 90px;
-  width: auto;
-  height: auto;
+	max-height: 90px;
+	width: auto;
+	height: auto;
 }
 
 /* Menú alineado a la derecha */
 .main-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
 }
 
 .main-nav ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 17px;
-  padding: 8px 5px;
-  transition: color 0.3s;
+	text-decoration: none;
+	color: #000000;
+	font-size: 17px;
+	padding: 8px 5px;
+	transition: color 0.3s;
 }
 
 .main-nav ul li a:hover {
-  color: #333;
+	color: #333;
 }
 
 /* HERO SLIDER (sin padding-top para que el header lo cubra) */
 
+.slide-1 {
+	background-image: url('../images/Corn.png');
+}
+
+.slide-2 {
+	background-image: url('../images/COWS.png');
+}
+
+.slide-3 {
+	background-image: url('../images/suckler.png');
+}
+
+.slide-4 {
+	background-image: url('../images/sheeps2.png');
+}
+
 .hero-slider {
-  position: relative;
-  width: 100%;
-  height: 785px;
-  overflow: hidden;
-  padding-top: 0;
+	position: relative;
+	width: 100%;
+	height: 785px;
+	overflow: hidden;
+	padding-top: 0;
 }
 
 .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 0.5s ease;
-  z-index: 1;
-  opacity: 0;
-  animation: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	transition: opacity 0.5s ease;
+	z-index: 1;
+	opacity: 0;
+	animation: none;
 }
 
 .slide.active {
-  opacity: 1;
-  animation: zoomOut 5s ease-in-out forwards;
+	opacity: 1;
+}
+
+.slide.active:not(:first-child) {
+	animation: zoomOut 5s ease-in-out forwards;
 }
 
 @keyframes zoomOut {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 20px;
 }
 
 .hero-content {
-  color: #ffffff;
-  max-width: 800px;
+	color: #ffffff;
+	max-width: 800px;
 }
 
 .hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+	font-size: 48px;
+	margin-bottom: 20px;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
-  font-size: 22px;
-  line-height: 1.5;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	font-size: 22px;
+	line-height: 1.5;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Cartel realista con marco colgado */
 .realistic-sign {
-  position: absolute;
-  bottom: 0; /* ⬅ esto hace que llegue hasta el fondo */
-  /* left: 0; */
-  width: 600px; /* ⬅ hazlo más grande */
-  z-index: 5;
-  pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	/* ⬅ esto hace que llegue hasta el fondo */
+	/* left: 0; */
+	width: 600px;
+	/* ⬅ hazlo más grande */
+	z-index: 5;
+	pointer-events: none;
 }
 
 /* Marco de forja */
 .marco {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 
 /* Imagen centrada dentro del marco */
 .in-frame {
-  position: absolute;
-  top: 49%;   /* AJUSTA fino con DevTools */
-  left: 50%;  /* AJUSTA fino con DevTools */
-  transform: translate(-50%, -50%);
-  width: 392px;   /* ⬅ hazla más grande */
-  height: 485px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 46%;
+	/* AJUSTA fino con DevTools */
+	left: 50%;
+	/* AJUSTA fino con DevTools */
+	transform: translate(-50%, -50%);
+	width: 396px;
+	/* ⬅ hazla más grande */
+	height: 424px;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 
