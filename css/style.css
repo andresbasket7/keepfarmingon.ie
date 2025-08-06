@@ -391,6 +391,7 @@ header {
 	animation: zoomOut 5s ease-in-out forwards;
 }
 
+/* Zoom en las imágenes
 @keyframes zoomOut {
 	0% {
 		transform: scale(1.1);
@@ -399,7 +400,7 @@ header {
 	100% {
 		transform: scale(1);
 	}
-}
+} */
 
 .hero-overlay {
 	position: absolute;
