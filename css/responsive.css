@@ -3,10 +3,10 @@
 /*-----------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------*/
-/* Medium devices (tablets, 768px and up)
+/* Medium devices (tablets, 600px and up)
 /*-----------------------------------------------------------------*/
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
 
 	/*-----------------------------------------------------------------*/
 	/* 01. Header
@@ -133,54 +133,53 @@
 	/* 03. Blur Section
 /*-----------------------------------------------------------------*/
 
-	
 	.blur-background-section {
 		padding: 80px 15px;
 	}
 
 	.content-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 0 20px;
-  }
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		padding: 0 20px;
+	}
 
-  .section-title,
-  .section-title2 {
-    font-size: 28px;
-    margin-bottom: 60px;
-    padding: 0 10px;
-  }
+	.section-title,
+	.section-title2 {
+		font-size: 28px;
+		margin-bottom: 60px;
+		padding: 0 10px;
+	}
 
-  .section-text-card {
-    padding: 20px;
-    font-size: 17px;
-    margin: 30px 20px;
-  }
+	.section-text-card {
+		padding: 20px;
+		font-size: 17px;
+		margin: 30px 20px;
+	}
 
-  .info-card {
-    width: 100%;
-  }
+	.info-card {
+		width: 100%;
+	}
 
-  .info-card img {
-    height: 300px;
-  }
+	.info-card img {
+		height: 300px;
+	}
 
-  .info-card h3 {
-    font-size: 18px;
-    padding: 16px;
-  }
+	.info-card h3 {
+		font-size: 18px;
+		padding: 16px;
+	}
 
-  .info-card p {
-    font-size: 15px;
-    padding: 16px;
-  }
+	.info-card p {
+		font-size: 15px;
+		padding: 16px;
+	}
 
-  .expandable::after {
-    font-size: 15px;
-    right: 16px;
-    bottom: 10px;
-  }
-}
+	.expandable::after {
+		font-size: 15px;
+		right: 16px;
+		bottom: 10px;
+	}
+
 
 
 	/*-----------------------------------------------------------------*/
@@ -220,74 +219,117 @@
 	/*-----------------------------------------------------------------*/
 	/* 07. Challenges Section
 /*-----------------------------------------------------------------*/
-
-	.challenges-section {
-		padding: 40px 20px;
+	.challenges {
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
 	}
 
-	.challenges-container h2 {
-		font-size: 24px;
-		margin-bottom: 15px;
+	.challenges-column {
+		width: 100%;
+		max-width: 500px;
 	}
 
-	.challenges-container p {
-		font-size: 15px;
-		line-height: 1.6;
-		margin-bottom: 30px;
-		padding: 0 10px;
+	.column-image {
+		max-width: 100%;
+		height: auto;
 	}
 
-	.challenges-images {
-		flex-direction: row;
+	.challenges-list {
+		font-size: 1.1rem;
+		line-height: 2.5;
+		padding-left: 10px;
+	}
+
+	.section-text-card {
+		margin: 40px auto;
+		font-size: 13px;
+	}
+
+	/* Farm Family */
+
+	.curved-text-section {
+		padding: 30px 15px;
+	}
+
+	.curved-text-section .curved-text {
+		height: 160px;
+	}
+
+	.curved-text-section p {
+		font-size: 22px;
+	}
+
+	.images_checkout {
+		gap: 15px;
 		justify-content: center;
 		flex-wrap: wrap;
+	}
+
+	.images_checkout img {
+		height: 240px;
+		width: auto;
+		max-width: 100%;
+		border-radius: 10px;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 08. ISSUES
+/*-----------------------------------------------------------------*/
+
+	.issues-container h2 {
+		font-size: 24px;
+	}
+
+	.issues-container p {
+		font-size: 15px;
+		padding: 0 20px;
+	}
+
+	.issues-images {
 		gap: 20px;
 	}
 
-	.challenges-images img {
-		width: 45%;
-		max-width: 100%;
+	.issues-images img {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.issues-container .need {
+		margin: 30px auto 15px auto;
+		padding: 0 50px;
 	}
 
 	/* Coaching Section */
-	.coaching-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
-		padding: 0 20px;
-		align-items: stretch;
-		/* Asegura que ambas celdas tengan la misma altura */
-	}
-
-	.content-box,
-	.image-box {
-		display: flex;
-		/* Para controlar contenido interior */
+	#coaching-section {
+		padding: 40px 15px;
 		flex-direction: column;
-		justify-content: center;
-		max-width: 100%;
-		width: 100%;
-		height: 100%;
-		/* ← Esta línea es CLAVE */
-		padding: 20px;
-		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-		border-radius: 14px;
-		box-sizing: border-box;
 	}
 
-	.image-box {
-		max-height: none;
-		/* Elimina altura fija */
-		overflow: hidden;
-		padding: 0;
+	.coaching-container {
+		gap: 40px;
+		padding: 0 15px;
 	}
 
-	.image-box img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 14px;
-		display: block;
+	.content-box {
+		padding: 30px;
+	}
+
+	.content-box h2 {
+		font-size: 19px;
+		letter-spacing: 1px;
+	}
+
+	.content-box p {
+		font-size: 15px;
+	}
+
+	.content-box li {
+		font-size: 12px;
+	}
+
+	.content-box li i {
+		font-size: 16px;
 	}
 
 	/* Footer */
@@ -352,14 +394,14 @@
 	.hero-content h1 {
 		font-size: 3rem;
 	}
-
+}
 
 /*-----------------------------------------------------------------*/
 /* Small devices (phones, 600px and down)
 /*-----------------------------------------------------------------*/
 
 
-@media (max-width: 767px) {
+@media (max-width: 599px) {
 
 	/*-----------------------------------------------------------------*/
 	/* 01. Header
@@ -560,54 +602,52 @@
 
 	.section-title,
 	.section-title2 {
-		font-size: 24px;
-		margin-bottom: 30px;
+		font-size: 18px;
+		margin-bottom: 40px;
+		padding: 0 8px;
 		text-align: center;
 	}
 
-	.section-title2 {
-		margin: 40px 0 20px 0;
-	}
-
 	.section-text-card {
-		padding: 15px;
-		margin: 20px auto;
+		padding: 16px;
 		font-size: 15px;
-		text-align: justify;
+		margin: 20px 12px;
 	}
 
 	.info-card {
 		width: 100%;
-		max-width: 500px;
-		height: 290px;
-		/* MISMA ALTURA PARA TODAS LAS TARJETAS */
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-		border-radius: 10px;
+	}
+
+	.info-card img {
+		height: 300px;
 	}
 
 	.info-card h3 {
 		font-size: 16px;
-		padding: 15px 15px 5px 15px;
+		padding: 10px;
+		padding-bottom: 0;
 	}
 
 	.info-card p {
 		font-size: 14px;
-		padding: 0 15px 15px 15px;
-		text-align: justify;
+		padding: 12px;
 	}
 
-	.info-card img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 8px;
+	.expandable {
+		max-height: 50px;
+	}
+
+	.expandable::after {
+		font-size: 13px;
+		right: 12px;
+		bottom: 8px;
 	}
 
 
 	/*-----------------------------------------------------------------*/
 	/* 06. Timeline
 /*-----------------------------------------------------------------*/
-
+	/* 
 	.timeline-section {
 		padding: 30px 10px;
 	}
@@ -655,31 +695,130 @@
 		margin-left: 40px;
 		margin-right: 0;
 		text-align: left;
+	} */
+
+	/*-----------------------------------------------------------------*/
+	/* 07. Challenges 
+/*-----------------------------------------------------------------*/
+
+	.section-title2 {
+		font-size: 22px;
+		margin-top: 60px;
+		margin-bottom: 0px;
+		padding: 0 10px;
+	}
+
+	.challenges {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 0 10px;
+	}
+
+	.challenges-column {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.column-image {
+		width: 100%;
+		height: auto;
+	}
+
+	.challenges-list {
+		font-size: 1rem;
+		line-height: 2;
+		padding-left: 8px;
+	}
+
+	.section-text-card {
+		margin: 30px auto;
+		font-size: 13px;
+		padding: 0 12px;
+		text-align: justify;
 	}
 
 	/*-----------------------------------------------------------------*/
-	/* 07. Challenges Section
+	/* 07. Issues
 /*-----------------------------------------------------------------*/
 
-	.challenges-section {
+	.issues-container h2 {
+		font-size: 20px;
+		padding: 0 10px;
+		text-align: center;
+	}
+
+	.issues-container p {
+		font-size: 14px;
+		line-height: 1.6;
+		padding: 0 15px;
+		text-align: justify;
+	}
+
+	.issues-images {
+		gap: 15px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.issues-images img {
+		width: 100%;
+		max-width: 90%;
+		height: auto;
+	}
+
+	.issues-container .need {
+		margin: 20px auto 10px auto;
+		padding: 0 4px;
+		text-align: center;
+	}
+
+
+	*-----------------------------------------------------------------*/
+	/* 08. Farm Family
+/*-----------------------------------------------------------------*/
+
+	.curved-text-section {
 		padding: 30px 15px;
 	}
 
-	.challenges-images {
-		flex-direction: column;
-		gap: 15px;
+	.curved-text-section .curved-text {
+		height: 120px;
+		margin-bottom: 15px;
 	}
 
-	.challenges-images img {
-		width: 100%;
+	.curved-text-section .curved-text text {
+		font-size: 64px;
 	}
+
+	.curved-text-section p {
+		font-size: 18px;
+		padding: 0 10px;
+	}
+
+	.images_checkout {
+		gap: 8px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.images_checkout img {
+		width: 90%;
+		height: auto;
+		max-height: 220px;
+		object-fit: cover;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* 07. Change
+/*-----------------------------------------------------------------*/
 
 	.farm-change-section {
 		padding: 30px 15px;
 	}
 
 	.farm-text.highlight {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	/*-----------------------------------------------------------------*/
@@ -687,63 +826,39 @@
 /*-----------------------------------------------------------------*/
 
 	#coaching-section {
-		padding: 20px 12px;
+		padding: 30px 10px;
+		flex-direction: column;
+	}
+
+	.coaching-container {
+		gap: 30px;
+		padding: 0 10px;
 	}
 
 	.content-box {
-		padding: 15px 12px;
-		background: #fff;
-		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-		border-radius: 14px;
-		min-height: auto;
-		max-width: 100%;
-		width: 100%;
-		text-align: center;
-	}
-
-	.image-box {
-		padding: 0;
-		/* Sin padding para evitar recuadro */
-		background: none;
-		/* Sin fondo */
-		box-shadow: none;
-		/* Sin sombra */
-		border-radius: 14px;
-		/* Solo borde redondeado */
-		max-width: 100%;
-		width: 100%;
-		overflow: hidden;
-	}
-
-	.image-box img {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		border-radius: 14px;
-		display: block;
+		padding: 20px;
 	}
 
 	.content-box h2 {
 		font-size: 20px;
+		letter-spacing: 0.5px;
+		text-align: center;
 		margin-bottom: 10px;
 	}
 
 	.content-box p {
-		font-size: 15px;
-		margin-bottom: 12px;
-		line-height: 1.5;
-	}
-
-	.content-box ul {
-		padding-left: 20px;
-		margin: 0;
+		font-size: 14px;
+		text-align: justify;
 	}
 
 	.content-box li {
-		font-size: 15px;
-		margin-bottom: 8px;
-		padding-left: 22px;
+		font-size: 12px;
 		line-height: 1.4;
+		gap: 8px;
+	}
+
+	.content-box li i {
+		font-size: 14px;
 	}
 
 	/*-----------------------------------------------------------------*/
@@ -836,7 +951,8 @@
 		flex-direction: column;
 		gap: 20px;
 		align-items: center;
-		padding-bottom: 180px; /*Evitar que desborde la imagen*/
+		padding-bottom: 180px;
+		/*Evitar que desborde la imagen*/
 		overflow: hidden;
 	}
 
@@ -862,7 +978,6 @@
 
 	.description,
 	.description-list,
-	.section-text-card,
 	.challenges-container p,
 	.farm-text,
 	.content-box p,
@@ -892,55 +1007,44 @@
 		box-sizing: border-box;
 	}
 
+	.section-text-card {
+		font-size: 12px;
+	}
+
 	#coaching-section {
-		padding: 20px 10px;
+		padding: 20px 8px;
+		flex-direction: column;
 	}
 
 	.coaching-container {
-		display: flex;
-		flex-direction: column;
 		gap: 20px;
+		padding: 0 8px;
 	}
 
-	.content-box,
-	.image-box {
-		padding: 12px;
-		width: 100%;
-		min-height: auto;
-		box-shadow: none;
-		border-radius: 10px;
-	}
-
-	.image-box {
-		padding: 0;
-		max-height: 220px;
-		overflow: hidden;
-	}
-
-	.image-box img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 10px;
+	.content-box {
+		padding: 15px;
 	}
 
 	.content-box h2 {
-		font-size: 16px;
-		margin-bottom: 6px;
+		font-size: 18px;
+		letter-spacing: 0.4px;
 		text-align: center;
+		margin-bottom: 8px;
 	}
 
 	.content-box p {
 		font-size: 13px;
-		text-align: center;
-		margin-bottom: 6px;
+		text-align: justify;
 	}
 
 	.content-box li {
-		font-size: 13px;
-		margin-bottom: 5px;
-		padding-left: 18px;
-		line-height: 1.4;
+		font-size: 11px;
+		line-height: 1.3;
+		gap: 6px;
+	}
+
+	.content-box li i {
+		font-size: 12px;
 	}
 
 	.timeline-line {

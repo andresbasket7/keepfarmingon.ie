@@ -319,7 +319,7 @@ header {
 	max-height: 120px;
 	width: auto;
 	height: auto;
-	
+
 }
 
 /* Menú alineado a la derecha */
@@ -678,31 +678,32 @@ header {
 }
 
 .expandable {
-  overflow: hidden;
-  max-height: 70px;
-  cursor: pointer;
-  transition: max-height 0.4s ease-in-out;
-  position: relative;
+	overflow: hidden;
+	max-height: 60px;
+	cursor: pointer;
+	transition: max-height 0.4s ease-in-out;
+	position: relative;
 }
 
 .expandable.expanded {
-  max-height: 500px; 
+	max-height: 500px;
 }
 
 .expandable::after {
-  content: "More ▼";
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  font-size: 16px;
-  color: #888;
-  transition: transform 0.3s;
+	content: "More ▼";
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	font-size: 16px;
+	color: #888;
+	transition: transform 0.3s;
 }
 
 .expandable.expanded::after {
-  transform: rotate(180deg);
-  content: "▲";
+	transform: rotate(180deg);
+	content: "▲";
 }
+
 .expandable:hover {
 	transform: translateY(-5px);
 }
@@ -712,83 +713,84 @@ header {
 /*-----------------------------------------------------------------*/
 
 .challenges {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  position: relative; 
-  z-index: 1;
-  
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 1;
+
 }
 
 .challenges-column {
-  flex: 1;
-  display: flex; 
-  justify-content: center; /* Centrado horizontal */
-  align-items: center;     /* Centrado vertical */
-  text-align: center;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	/* Centrado horizontal */
+	align-items: center;
+	/* Centrado vertical */
+	text-align: center;
 }
 
 .column-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.icon {
-	width: 80%;
-	height: 90%;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	object-fit: cover;
 }
 
 
 /* Lista con letras grandes y blancas */
 .challenges-list {
-  list-style: none;
-  font-weight: bold;
-  padding-left: 20px;
-  font-size: 1.2rem;
-  color: white;
-  line-height: 3;
-  margin: 0;
-  text-align: left;
+	list-style: none;
+	font-weight: bold;
+	padding-left: 20px;
+	font-size: 1.2rem;
+	color: white;
+	line-height: 3;
+	margin: 0;
+	text-align: left;
 }
 
 .challenges-list li {
-  font-weight: 800; 
-  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); 
-  transition: all 0.3s ease;
-  cursor: pointer;
+	font-weight: 800;
+	text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
+	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 .challenges-list li:hover {
-  color: #7fde19; /* Cambia el color al pasar el cursor */
-  transform: translateX(5px); /* Pequeño movimiento lateral */
+	color: #7fde19;
+	/* Cambia el color al pasar el cursor */
+	transform: translateX(5px);
+	/* Pequeño movimiento lateral */
 }
 
 
 
 /*-----------------------------------------------------------------*/
-/* 08. CHECK OUT
+/* 08. Farm Family
 /*-----------------------------------------------------------------*/
 .curved-text-section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f8f5ed;
+	padding: 40px 20px;
+	text-align: center;
+	background-color: #f8f5ed;
+	overflow-x: hidden;
 }
 
 /* Texto curvo */
 .curved-text-section .curved-text {
-    width: 100%;
-    max-width: 1200px;
-    height: 200px;
-    margin: 0 auto 20px auto;
+	width: 100%;
+	max-width: 1200px;
+	height: 200px;
+	margin: 0 auto 20px auto;
 }
 
 .curved-text-section .curved-text svg {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 
 .curved-text-section p {
@@ -798,23 +800,24 @@ header {
 }
 
 .curved-text-section .curved-text text {
-    fill: #2c3e50;
-    font-size: 60px;
-    font-weight: bold;
+	fill: #2c3e50;
+	font-size: 60px;
+	font-weight: bold;
 }
 
 /* Contenedor de imágenes */
 .images_checkout {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
 	padding-bottom: 20px;
+	flex-wrap: wrap;
 }
 
 .images_checkout img {
-    width: auto;
-    height: 360px;
-    border-radius: 12px;
+	max-width: 100%;
+	height: 320px;
+	border-radius: 12px;
 }
 
 
@@ -964,6 +967,7 @@ header {
 .issues-container p strong {
 	font-weight: bold;
 }
+
 .issues-container .need {
 	margin: 40px auto 20px auto;
 	text-align: center;
@@ -1021,7 +1025,7 @@ header {
 .farm-text.highlight {
 	font-weight: bold;
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 	color: #c9a76d;
 	/* Un tono dorado ocre suave para resaltar, que combina con la paleta de tierra */
 }
@@ -1121,84 +1125,91 @@ header {
 /* 10. Coaching
 /*-----------------------------------------------------------------*/
 #coaching-section {
-  background: #f8f5ed;
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background: #f8f5ed;
+	padding: 60px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+	/* Evita scroll horizontal */
+	box-sizing: border-box;
 }
 
 .coaching-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 60px;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 10px;
+	/* Asegura espacio interno en móviles */
 }
 
 .image-box {
-  border-radius: 20px;
-  overflow: hidden;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 100%;
 }
 
 .image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
 }
 
-
 .content-box {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  color: #2c2c2c;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	background-color: #ffffff;
+	border-radius: 20px;
+	padding: 40px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	color: #2c2c2c;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
 }
 
 .content-box h2 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #5a7d3a;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #5a7d3a;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
 }
 
 .content-box p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  color: #444;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 24px;
+	color: #444;
 }
 
 .content-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .content-box li {
-  font-size: 16px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.6;
-  gap: 12px;
+	font-size: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	align-items: flex-start;
+	line-height: 1.6;
+	gap: 12px;
 }
 
 .content-box li i {
-  color: #5a7d3a;
-  font-size: 18px;
-  min-width: 20px;
-  margin-top: 2px;
+	color: #5a7d3a;
+	font-size: 18px;
+	min-width: 20px;
+	margin-top: 2px;
 }
 
 /*-----------------------------------------------------------------*/
