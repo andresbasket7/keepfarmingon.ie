@@ -348,19 +348,19 @@ header {
 /* HERO SLIDER (sin padding-top para que el header lo cubra) */
 
 .slide-1 {
-	background-image: url('../images/Corn.png');
+	background-image: url('../images/Corn.webp');
 }
 
 .slide-2 {
-	background-image: url('../images/COWS.png');
+	background-image: url('../images/COWS.webp');
 }
 
 .slide-3 {
-	background-image: url('../images/suckler.png');
+	background-image: url('../images/suckler.webp');
 }
 
 .slide-4 {
-	background-image: url('../images/sheeps2.png');
+	background-image: url('../images/sheeps2.webp');
 }
 
 .hero-slider {
@@ -560,7 +560,7 @@ header {
 /* Imagen de fondo borrosa */
 .blur-background-section {
 	position: relative;
-	background-image: url('../images/cow.jpg');
+	background-image: url('../images/cow.webp');
 	/* tu imagen */
 	background-size: cover;
 	background-position: center;
