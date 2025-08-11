@@ -490,11 +490,11 @@
 	/* Hero */
 
 	.slide-1 {
-		background-image: url('../images/Corn_mobile.jpg');
+		background-image: url('../images/Corn_mobile.webp');
 	}
 
 	.slide-2 {
-		background-image: url('../images/COWS_mobile.png');
+		background-image: url('../images/COWS_mobile.webp');
 	}
 
 	.slide-3 {
@@ -502,7 +502,7 @@
 	}
 
 	.slide-4 {
-		background-image: url('../images/sheeps_mobile.jpg');
+		background-image: url('../images/sheeps_mobile.webp');
 	}
 
 	.hero-slider {
