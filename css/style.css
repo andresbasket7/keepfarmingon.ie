@@ -1437,31 +1437,69 @@ button#contact-submit:hover {
 
 /* Extra section (checkboxes) */
 .extra-section {
-	margin-top: 25px;
-	padding: 15px;
-	background-color: #f8f5ed;
-	border-radius: 8px;
+	margin-top: 30px;
+	padding: 25px;
 }
 
 .extra-section p {
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 10px;
-	color: #333;
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 18px;
+	color: #222;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .extra-section label {
-	display: block;
-	margin-bottom: 8px;
-	font-size: 18px;
-	color: #444;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 15px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+	margin-bottom: 12px;
 	cursor: pointer;
+	transition: all 0.25s ease;
+	border: 1px solid transparent;
+}
+
+.extra-section label:hover {
+	box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+	border-color: #d0d0d0;
+	background: #fafafa;
 }
 
 .extra-section input[type="checkbox"] {
-	margin-right: 8px;
-	transform: scale(1.2);
-	vertical-align: middle;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #bbb;
+	border-radius: 5px;
+	display: grid;
+	place-content: center;
+	transition: all 0.25s ease;
+	cursor: pointer;
+}
+
+.extra-section input[type="checkbox"]::before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+	box-shadow: inset 14px 14px #577E19;
+	border-radius: 3px;
+}
+
+.extra-section input[type="checkbox"]:checked {
+	border-color: #577E19;
+	background: #e6f0da;
+}
+
+.extra-section input[type="checkbox"]:checked::before {
+	transform: scale(1);
 }
 
 
