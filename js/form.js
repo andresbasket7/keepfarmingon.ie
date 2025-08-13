@@ -4,6 +4,19 @@ window.addEventListener("DOMContentLoaded", function () {
   const loadingMessage = document.querySelector(".loading_message");
   const companyDetails = document.getElementById("company-details");
 
+  function toggleInput(checkboxId, inputId) {
+    const checkbox = document.getElementById(checkboxId);
+    const input = document.getElementById(inputId);
+
+    if (checkbox && input) {
+      checkbox.addEventListener("change", function () {
+        input.style.display = this.checked ? "inline-block" : "none";
+      });
+    }
+  }
+  toggleInput("other-check-1", "other-text-1");
+  toggleInput("other-check-2", "other-text-2");
+
   if (!form) {
     console.error("Form with ID 'gform' not found");
     return;
@@ -32,7 +45,6 @@ window.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         loadingMessage.style.display = "none";
-        // Siempre limpia el captcha para permitir un nuevo token
         grecaptcha.reset();
 
         if (data.success) {
