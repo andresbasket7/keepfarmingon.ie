@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const loadingMessage = document.querySelector(".loading_message");
   const companyDetails = document.getElementById("company-details");
   const submitBtn = document.getElementById("contact-submit");
+  const confidence = document.getElementById("confidence");
 
   function toggleInput(checkboxId, inputId) {
     const checkbox = document.getElementById(checkboxId);
@@ -49,6 +50,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (data.success) {
           form.style.display = "none";
           companyDetails.style.display = "none";
+          confidence.style.display = "none";
           thankYouMessage.style.display = "block";
         } else {
           alert("There was an error: " + JSON.stringify(data));
