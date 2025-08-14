@@ -3,11 +3,11 @@ window.addEventListener("DOMContentLoaded", function () {
   const thankYouMessage = document.querySelector(".thankyou_message");
   const loadingMessage = document.querySelector(".loading_message");
   const companyDetails = document.getElementById("company-details");
+  const submitBtn = document.getElementById("contact-submit");
 
   function toggleInput(checkboxId, inputId) {
     const checkbox = document.getElementById(checkboxId);
     const input = document.getElementById(inputId);
-
     if (checkbox && input) {
       checkbox.addEventListener("change", function () {
         input.style.display = this.checked ? "inline-block" : "none";
@@ -22,22 +22,19 @@ window.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  // Evita que se envíe directamente
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    const recaptchaToken = grecaptcha.getResponse();
-
-    if (!recaptchaToken) {
-      alert("Please complete the reCAPTCHA before submitting.");
-      return;
-    }
-
-    // Desactivar botón para evitar doble envío
-    const submitBtn = document.getElementById("contact-submit");
     submitBtn.disabled = true;
+    grecaptcha.execute(); // Llama a invisible reCAPTCHA
+  });
+
+  // Esta función se llama solo si Google valida el captcha
+  window.onRecaptchaSuccess = function (token) {
     loadingMessage.style.display = "block";
 
     const formData = new FormData(form);
+    formData.append("g-recaptcha-response", token);
 
     fetch(form.action, {
       method: "POST",
@@ -46,8 +43,8 @@ window.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         loadingMessage.style.display = "none";
-        grecaptcha.reset();
         submitBtn.disabled = false;
+        grecaptcha.reset(); // Listo para otro intento si falla
 
         if (data.success) {
           form.style.display = "none";
@@ -59,10 +56,10 @@ window.addEventListener("DOMContentLoaded", function () {
       })
       .catch(error => {
         loadingMessage.style.display = "none";
-        grecaptcha.reset();
         submitBtn.disabled = false;
+        grecaptcha.reset();
         alert("There was an error submitting the form. Please try again.");
         console.error(error);
       });
-  });
+  };
 });
