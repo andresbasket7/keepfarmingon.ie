@@ -25,7 +25,6 @@ window.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Obtener token actual
     const recaptchaToken = grecaptcha.getResponse();
 
     if (!recaptchaToken) {
@@ -33,10 +32,12 @@ window.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Desactivar botón para evitar doble envío
+    const submitBtn = document.getElementById("contact-submit");
+    submitBtn.disabled = true;
     loadingMessage.style.display = "block";
 
     const formData = new FormData(form);
-    formData.append("g-recaptcha-response", recaptchaToken);
 
     fetch(form.action, {
       method: "POST",
@@ -46,6 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         loadingMessage.style.display = "none";
         grecaptcha.reset();
+        submitBtn.disabled = false;
 
         if (data.success) {
           form.style.display = "none";
@@ -58,6 +60,7 @@ window.addEventListener("DOMContentLoaded", function () {
       .catch(error => {
         loadingMessage.style.display = "none";
         grecaptcha.reset();
+        submitBtn.disabled = false;
         alert("There was an error submitting the form. Please try again.");
         console.error(error);
       });
