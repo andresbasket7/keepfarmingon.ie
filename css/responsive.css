@@ -643,60 +643,6 @@
 		bottom: 8px;
 	}
 
-
-	/*-----------------------------------------------------------------*/
-	/* 06. Timeline
-/*-----------------------------------------------------------------*/
-	/* 
-	.timeline-section {
-		padding: 30px 10px;
-	}
-
-	.timeline-line {
-		left: 20px;
-		top: 20px;
-		bottom: 140px;
-	}
-
-	.timeline-step {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.timeline-icon {
-		position: relative;
-		left: auto;
-		transform: none;
-		margin-bottom: 8px;
-		width: 40px;
-		height: 40px;
-		font-size: 18px;
-	}
-
-	.timeline-content {
-		width: calc(100% - 40px);
-		margin-left: 40px;
-		padding: 12px;
-		text-align: left;
-	}
-
-	.timeline-content h3 {
-		font-size: 18px;
-		padding-bottom: 10px;
-	}
-
-	.timeline-content p {
-		font-size: 14px;
-		margin: 0 10px;
-	}
-
-	.timeline-content.left,
-	.timeline-content.right {
-		margin-left: 40px;
-		margin-right: 0;
-		text-align: left;
-	} */
-
 	/*-----------------------------------------------------------------*/
 	/* 07. Challenges 
 /*-----------------------------------------------------------------*/
@@ -774,7 +720,7 @@
 	}
 
 
-	*-----------------------------------------------------------------*/
+	/*-----------------------------------------------------------------*/
 	/* 08. Farm Family
 /*-----------------------------------------------------------------*/
 
@@ -959,7 +905,63 @@
 	.cert-column {
 		padding: 10px;
 	}
+
+	/*-----------------------------------------------------------------*/
+	/* 06. Timeline
+/*-----------------------------------------------------------------*/
+	 
+	.timeline-section {
+		padding: 30px 10px;
+	}
+
+	.timeline-line {
+		left: 20px;
+		top: 20px;
+		bottom: 140px;
+	}
+
+	.timeline-step {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.timeline-icon {
+		position: relative;
+		left: auto;
+		transform: none;
+		margin-bottom: 8px;
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+	}
+
+	.timeline-content {
+		width: calc(100% - 40px);
+		margin-left: 40px;
+		padding: 12px;
+		text-align: left;
+	}
+
+	.timeline-content h3 {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
+	.timeline-content p {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+
+	.timeline-content.left,
+	.timeline-content.right {
+		margin-left: 40px;
+		margin-right: 0;
+		text-align: left;
+	}
+	
 }
+
+
 
 /*-----------------------------------------------------------------*/
 /* Extra extra small devices (even smaller phones, 375px and down)
