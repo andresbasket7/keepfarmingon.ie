@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById("contact-submit");
   const confidence = document.getElementById("confidence");
 
+  // Función para mostrar/ocultar inputs de "Other"
   function toggleInput(checkboxId, inputId) {
     const checkbox = document.getElementById(checkboxId);
     const input = document.getElementById(inputId);
@@ -45,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         loadingMessage.style.display = "none";
         submitBtn.disabled = false;
-        grecaptcha.reset(); // Listo para otro intento si falla
+        grecaptcha.reset();
 
         if (data.success) {
           form.style.display = "none";

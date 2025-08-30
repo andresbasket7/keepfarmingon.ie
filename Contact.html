@@ -106,7 +106,7 @@
 	<!-- GET IN TOUCH -->
 
 	<section id="get-in-touch" class="clearfix">
-		<div id= "confidence" class="container">
+		<div id="confidence" class="container">
 			<h2>Get In Touch With Us</h2>
 			<p>To contact us in strict confidence, please do so by email or telephone.</p>
 		</div>
@@ -123,9 +123,7 @@
 				</div>
 
 				<div class="half right">
-					<form name="form" id="gform" class="gform pure-form"
-						action="https://script.google.com/macros/s/AKfycbzYafGu-6i6L8kT7KZKddXjr6jKOOtZQEfkbKBv-jENbBohgqp3PammvZSShg4BHNg/exec"
-						method="POST">
+					<form name="form" id="gform" class="gform pure-form" action="src/send_form.php" method="POST">
 						<input id="contact-name" class="input" type="text" placeholder="Your Name" name="name" required>
 						<input id="contact-email" class="input" type="email" placeholder="E-mail Address" name="email"
 							required>
@@ -137,17 +135,17 @@
 
 						<div class="extra-section">
 							<p>OPTIONAL, tick the following to share what you would like to discuss:</p><br>
-							<label><input type="checkbox" name="improvements" value="Communication better">
+							<label><input type="checkbox" name="improvements[]" value="Communication better">
 								Communicate better</label><br>
-							<label><input type="checkbox" name="improvements" value="Reach less"> Respond not
+							<label><input type="checkbox" name="improvements[]" value="Reach less"> Respond not
 								react</label><br>
-							<label><input type="checkbox" name="improvements" value="Be more confident"> Be more
+							<label><input type="checkbox" name="improvements[]" value="Be more confident"> Be more
 								confident</label><br>
-							<label><input type="checkbox" name="improvements" value="Decision making skills"> Be able to
+							<label><input type="checkbox" name="improvements[]" value="Decision making skills"> Be able to
 								decide easily</label><br>
-							<label><input type="checkbox" name="improvements" value="Know more about your profile"> Know
+							<label><input type="checkbox" name="improvements[]" value="Know more about your profile"> Know
 								more about how people tick</label><br>
-							<label><input type="checkbox" name="improvements" value="Be more motivated"> Be more
+							<label><input type="checkbox" name="improvements[]" value="Be more motivated"> Be more
 								motivated</label><br>
 							<label>
 								<input type="checkbox" id="other-check-1" name="improvements" value="Other">
