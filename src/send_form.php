@@ -25,15 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $other1 = $_POST['other_text_1'] ?? '';
     $other2 = $_POST['other_text_2'] ?? '';
 
-    foreach ($improvements as &$imp) {
-        if ($imp === 'Other' && $other1) {
-            $imp = $other1;
-        } elseif ($imp === 'Other' && $other2) {
-            $imp = $other2;
-         }
-    }
     $improvementsText = is_array($improvements) ? implode(", ", $improvements) : $improvements;
-
     // Crear el cuerpo del correo
     $emailBody = "New contact form submission:\n\n";
     $emailBody .= "Name: $name\n";
