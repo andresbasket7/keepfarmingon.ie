@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $recaptchaSecret = "6Lca0aUrAAAAAMlSZg_Hdtnv3Z-JRXlTE6XBGa5Z";
     $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
-    // Verificación de reCAPTCHA
+    // reCAPTCHA
     $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
     $captchaSuccess = json_decode($verify);
 
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Recoger datos del formulario
+    // Form data
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $phone = $_POST['phone'] ?? '';
@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $other2 = $_POST['other_text_2'] ?? '';
 
     $improvementsText = is_array($improvements) ? implode(", ", $improvements) : $improvements;
-    // Crear el cuerpo del correo
+
+    // -------- Main email --------
     $emailBody = "New contact form submission:\n\n";
     $emailBody .= "Name: $name\n";
     $emailBody .= "Email: $email\n";
@@ -36,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($other1) $emailBody .= "Other 1 detail: $other1\n";
     if ($other2) $emailBody .= "Other 2 detail: $other2\n";
 
-    // Cabeceras
     $headers = "From: info@keepfarmingon.ie\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
@@ -45,12 +45,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $to = "info@keepfarmingon.ie";
     $subject = "New contact from website";
 
-    if (mail($to, $subject, $emailBody, $headers)) {
-        echo json_encode(['success' => true, 'message' => 'Correo enviado correctamente.']);
+    $sentMain = mail($to, $subject, $emailBody, $headers);
+
+    // -------- Notification email --------
+    $toNotification = "keepfarmingonireland@gmail.com";
+    $subjectNotification = "New website contact received";
+    $messageNotification = "A new contact form submission has been received.\n\n".
+                       "Please check info@keepfarmingon.ie for the full message.";
+
+    $headersNotification = "From: info@keepfarmingon.ie\r\n";
+    $headersNotification .= "MIME-Version: 1.0\r\n";
+    $headersNotification .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    $sentNotification = mail($toNotification, $subjectNotification, $messageNotification, $headersNotification);
+
+    // -------- Response to frontend --------
+    if ($sentMain) {
+        echo json_encode(['success' => true, 'message' => 'Email sent successfully.']);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Error al enviar el correo.']);
+        echo json_encode(['success' => false, 'message' => 'Error sending the email.']);
     }
 } else {
-    echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
+    echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
 }
 ?>
