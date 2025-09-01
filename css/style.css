@@ -455,6 +455,7 @@ header {
 /* Marco */
 .marco {
 	width: 100%;
+	height: auto;
 	display: block;
 }
 
@@ -842,6 +843,7 @@ header {
 .images_checkout img {
 	max-width: 100%;
 	height: 320px;
+	width: auto;
 	border-radius: 12px;
 }
 
@@ -1071,8 +1073,8 @@ header {
 
 .image-box img {
 	width: 100%;
-	height: 100%;
 	object-fit: cover;
+	aspect-ratio: 4 / 5;
 	display: block;
 	transition: transform 0.4s ease;
 }
