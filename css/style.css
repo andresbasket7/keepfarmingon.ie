@@ -477,9 +477,9 @@ header {
 
 /* Notice */
 .notice {
-	position: absolute;      
+	position: absolute;
 	top: 35%;
-	right: 3%; 
+	right: 3%;
 	width: 200px;
 	z-index: 5;
 	border-radius: 12px;
@@ -1767,6 +1767,173 @@ button#contact-submit:hover {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* =========================================================
+   Programmes Section
+   ========================================================= */
+
+.programmes-section {
+	background: #f8f5ed;
+	padding: 40px 20px;
+}
+
+.programmes-wrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* dos columnas iguales */
+	gap: 32px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding-top: 36px;
+}
+
+.programmes-head {
+	text-align: center;
+	overflow: hidden;
+}
+
+.programmes-title {
+	font-size: clamp(28px, 3.5vw, 38px);
+	line-height: 1.2;
+	color: #1e3d1e;
+	margin: 0 0 10px;
+	font-weight: 800;
+	letter-spacing: -0.01em;
+}
+
+.programmes-subtitle {
+	margin: 0 auto;
+	max-width: 720px;
+	color: #666;
+	font-size: clamp(14px, 1.6vw, 17px);
+}
+
+/* Cards */
+.programme-card {
+	background: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px rgba(6, 129, 32, 0.12);
+	padding: 26px 24px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 32px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programme-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 28px rgba(6, 129, 32, 0.18);
+}
+
+/* Card Image */
+.programme-media img {
+	width: 100%;
+	border-radius: 12px;
+	display: block;
+	margin-bottom: 18px;
+}
+
+/* Header */
+.programme-header {
+	margin-bottom: 18px;
+}
+
+.programme-badge {
+	display: inline-block;
+	background: #2e572c;
+	color: #fff;
+	border-radius: 999px;
+	padding: 6px 12px;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.programme-badge.alt {
+	background: #1b4a22;
+}
+
+.programme-name {
+	font-size: 20px;
+	margin: 10px 0 4px;
+	color: #2b2b2b;
+	font-weight: 800;
+}
+
+.programme-meta {
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+
+/* Steps */
+.steps {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 16px;
+}
+
+.step {
+	position: relative;
+	padding-left: 28px;
+	margin-bottom: 12px;
+	color: #444;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.step-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #2e572c;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+/* Feature List */
+.feature-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 16px;
+}
+
+.feature-list li {
+	position: relative;
+	padding-left: 24px;
+	margin-bottom: 10px;
+	color: #444;
+	font-size: 16px;
+}
+
+.feature-list li::before {
+	content: "✔";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #1b4a22;
+	font-weight: 700;
+}
+
+/* Note */
+.programme-note {
+	background: #fafafa;
+	padding: 16px 20px;
+	border-radius: 12px;
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+	font-size: 14px;
+	color: #666;
+}
+
+
 /* === POSIBILIDADES === */
 .possibilities-block {
 	background: #f8f5ed;
@@ -1998,171 +2165,6 @@ button#contact-submit:hover {
 }
 
 
-/* =========================================================
-   Programmes Section
-   ========================================================= */
-
-.programmes-section {
-	background: #f8f5ed;
-	padding: 40px 20px;
-}
-
-.programmes-wrap {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	/* dos columnas iguales */
-	gap: 32px;
-	max-width: 1100px;
-	margin: 0 auto;
-	padding-top: 36px;
-}
-
-.programmes-head {
-	text-align: center;
-	overflow: hidden;
-}
-
-.programmes-title {
-	font-size: clamp(28px, 3.5vw, 38px);
-	line-height: 1.2;
-	color: #1e3d1e;
-	margin: 0 0 10px;
-	font-weight: 800;
-	letter-spacing: -0.01em;
-}
-
-.programmes-subtitle {
-	margin: 0 auto;
-	max-width: 720px;
-	color: #666;
-	font-size: clamp(14px, 1.6vw, 17px);
-}
-
-/* Cards */
-.programme-card {
-	background: #ffffff;
-	border-radius: 16px;
-	box-shadow: 0 8px 24px rgba(6, 129, 32, 0.12);
-	padding: 26px 24px;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 32px;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.programme-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 12px 28px rgba(6, 129, 32, 0.18);
-}
-
-/* Card Image */
-.programme-media img {
-	width: 100%;
-	border-radius: 12px;
-	display: block;
-	margin-bottom: 18px;
-}
-
-/* Header */
-.programme-header {
-	margin-bottom: 18px;
-}
-
-.programme-badge {
-	display: inline-block;
-	background: #2e572c;
-	color: #fff;
-	border-radius: 999px;
-	padding: 6px 12px;
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-}
-
-.programme-badge.alt {
-	background: #1b4a22;
-}
-
-.programme-name {
-	font-size: 20px;
-	margin: 10px 0 4px;
-	color: #2b2b2b;
-	font-weight: 800;
-}
-
-.programme-meta {
-	color: #666;
-	font-size: 14px;
-	margin-bottom: 16px;
-}
-
-/* Steps */
-.steps {
-	list-style: none;
-	padding-left: 0;
-	margin: 0 0 16px;
-}
-
-.step {
-	position: relative;
-	padding-left: 28px;
-	margin-bottom: 12px;
-	color: #444;
-	font-size: 16px;
-	line-height: 1.6;
-}
-
-.step-icon {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: #2e572c;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 700;
-	font-size: 12px;
-}
-
-/* Feature List */
-.feature-list {
-	list-style: none;
-	padding-left: 0;
-	margin: 0 0 16px;
-}
-
-.feature-list li {
-	position: relative;
-	padding-left: 24px;
-	margin-bottom: 10px;
-	color: #444;
-	font-size: 16px;
-}
-
-.feature-list li::before {
-	content: "✔";
-	position: absolute;
-	left: 0;
-	top: 0;
-	color: #1b4a22;
-	font-weight: 700;
-}
-
-/* Note */
-.programme-note {
-	background: #fafafa;
-	padding: 16px 20px;
-	border-radius: 12px;
-	border-top: 1px solid rgba(0, 0, 0, 0.05);
-	font-size: 14px;
-	color: #666;
-}
 
 /* OUR APPROACH*/
 .approach-text,
@@ -2312,16 +2314,18 @@ button#contact-submit:hover {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
+
 .see-more-btn {
-  background-color: #2e572c; /* Verde */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+	background-color: #2e572c;
+	/* Verde */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 /* Línea divisoria */
@@ -2483,23 +2487,23 @@ button#contact-submit:hover {
 /* ---------- QUESTION SECTION ---------- */
 
 #question {
-    padding: 60px 20px;
+	padding: 60px 20px;
 	max-width: 1000px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 }
 
-.first{
+.first {
 	border-top: 1px solid #ddd;
 }
 
 .section-title-FAQ {
-    font-size: 30px;
-    color: #2e572c;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center; 
+	font-size: 30px;
+	color: #2e572c;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 /* ----------- CONTAINER ----------- */
@@ -2568,106 +2572,109 @@ button#contact-submit:hover {
 
 /* ---------- NEWS SECTION ---------- */
 #news {
-  border-top: 1px solid #ddd;
-  padding: 60px 20px;
-  max-width: 740px;
-  margin: 0 auto;
+	border-top: 1px solid #ddd;
+	padding: 60px 20px;
+	max-width: 740px;
+	margin: 0 auto;
 }
 
 .section-header {
-  display: flex;
-  align-items: center; /* Centra verticalmente */
-  gap: 15px; /* Espacio entre el h2 y la imagen */
-  margin-bottom: 20px; /* Espacio debajo del header */
+	display: flex;
+	align-items: center;
+	/* Centra verticalmente */
+	gap: 15px;
+	/* Espacio entre el h2 y la imagen */
+	margin-bottom: 20px;
+	/* Espacio debajo del header */
 }
 
 .header-image {
-  width: 40%; /* Ajusta según necesites */
-  height: auto;
-  padding: 20px;
+	width: 40%;
+	/* Ajusta según necesites */
+	height: auto;
+	padding: 20px;
 }
 
 .section-title-FAQ {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 2.5rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #2c3e50;
+	margin-bottom: 2.5rem;
 }
 
 /* Tarjeta vertical */
 .news-card {
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	border-radius: 16px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: transform 0.3s ease;
 }
 
 .news-card:hover {
-  transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 /* Imagen arriba */
 .news-image {
-  width: 100%;
-  height: 416px;
-  object-fit: cover;
+	width: 100%;
+	height: 416px;
+	object-fit: cover;
 }
 
 /* Contenido abajo */
 .news-content {
-  padding: 20px;
-  text-align: left;
+	padding: 20px;
+	text-align: left;
 }
 
 .news-title {
-  font-size: 1.5rem;
-  color: #222;
-  margin: 1rem 0;
-  font-weight: 600;
+	font-size: 1.5rem;
+	color: #222;
+	margin: 1rem 0;
+	font-weight: 600;
 }
 
 .news-description {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+	font-size: 1rem;
+	color: #444;
+	line-height: 1.6;
+	margin-bottom: 1.5rem;
 }
 
 /* Botón */
 .news-button {
-  display: inline-block;
-  background: #2e572c;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+	display: inline-block;
+	background: #2e572c;
+	color: #fff;
+	padding: 0.8rem 1.5rem;
+	border-radius: 30px;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .news-button:hover {
-  background: #155c2c;
-  transform: scale(1.05);
+	background: #155c2c;
+	transform: scale(1.05);
 }
 
 /* ---------- FAQ SECTION ---------- */
 
 #faq {
-	border-top: 1px solid #ddd; 
-    padding: 60px 20px;
+	border-top: 1px solid #ddd;
+	padding: 60px 20px;
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
 .faq-item {
-	
+
 	margin-bottom: 1rem;
 	background: #fff;
 	border-radius: 10px;
@@ -2713,12 +2720,12 @@ button#contact-submit:hover {
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2") format("woff2"),
-       url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff") format("woff");
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2") format("woff2"),
+		url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff") format("woff");
 }
 
 
@@ -2731,6 +2738,47 @@ button#contact-submit:hover {
 /*-----------------------------------------------------------------*/
 
 @media (min-width: 600px) and (max-width: 1024px) {
+
+	/* General Sections */
+	.container {
+		padding: 0 15px;
+		max-width: 100%;
+	}
+
+	.section-container,
+	.content-container,
+	.farm-container,
+	.coaching-container,
+	.footer-container,
+	#contact {
+		padding: 0 15px;
+	}
+
+	.main-title,
+	.section-title,
+	.section-title2,
+	.timeline-title,
+	.challenges-container h2,
+	.farm-title {
+		font-size: 28px;
+	}
+
+	.description,
+	.description-list,
+	.section-text-card,
+	.challenges-container p,
+	.farm-text,
+	.content-box p,
+	.content-box ul,
+	.about-section-content p,
+	.about-section-content ul,
+	.cert-column p {
+		font-size: 16px;
+	}
+
+	.section-container {
+		padding: 10px;
+	}
 
 	/*-----------------------------------------------------------------*/
 	/* 01. Header
@@ -2812,46 +2860,13 @@ button#contact-submit:hover {
 		height: 210px;
 	}
 
-	/* General Sections */
-	.container {
-		padding: 0 15px;
-		max-width: 100%;
+	.notice {
+		position: absolute;
+		top: 35%;
+		right: 3%;
+		width: 120px;
 	}
 
-	.section-container,
-	.content-container,
-	.farm-container,
-	.coaching-container,
-	.footer-container,
-	#contact {
-		padding: 0 15px;
-	}
-
-	.main-title,
-	.section-title,
-	.section-title2,
-	.timeline-title,
-	.challenges-container h2,
-	.farm-title {
-		font-size: 28px;
-	}
-
-	.description,
-	.description-list,
-	.section-text-card,
-	.challenges-container p,
-	.farm-text,
-	.content-box p,
-	.content-box ul,
-	.about-section-content p,
-	.about-section-content ul,
-	.cert-column p {
-		font-size: 16px;
-	}
-
-	.section-container {
-		padding: 10px;
-	}
 
 	/*-----------------------------------------------------------------*/
 	/* 03. Blur Section
@@ -2905,40 +2920,6 @@ button#contact-submit:hover {
 	}
 
 
-
-	/*-----------------------------------------------------------------*/
-	/* 04. Timeline
-/*-----------------------------------------------------------------*/
-
-	.timeline-line {
-		left: 20px;
-		top: 60px;
-		bottom: 30px;
-	}
-
-	.timeline-icon {
-		left: 20px;
-		transform: translateX(-50%);
-	}
-
-	.timeline-content {
-		width: calc(100% - 70px);
-		margin-left: 60px;
-		text-align: left;
-		padding: 15px;
-	}
-
-	.timeline-content.left,
-	.timeline-content.right {
-		margin-left: 60px;
-		margin-right: 0;
-		text-align: left;
-	}
-
-	.timeline-content h3,
-	.timeline-content p {
-		text-align: left;
-	}
 
 	/*-----------------------------------------------------------------*/
 	/* 07. Challenges Section
@@ -3105,19 +3086,167 @@ button#contact-submit:hover {
 		font-size: 20px;
 	}
 
+	/*-----------------------------------------------------------------*/
+	/*  INDIVIDUAL Page
+/*-----------------------------------------------------------------*/
+	.who-we-are h2,
+	.the-problem h2,
+	.programmes-section h2,
+	.possibilities-block h2,
+	.timeline-section h2 {
+		font-size: 24px;
+	}
+
+	.who-we-are p,
+	.the-problem p,
+	.programmes-section p,
+	.possibilities-block p,
+	.timeline-section p,
+	.possibility-text,
+	.how-quote,
+	.footer p {
+		font-size: 16px;
+	}
+
+	/* Todas las listas */
+	.the-problem__list li,
+	.feature-list li,
+	.steps li,
+	.timeline-content ul li,
+	ul li,
+	ol li {
+		font-size: 14px;
+	}
+
+	.who-we-are {
+		padding-bottom: 20px;
+	}
+
+	/* For all the pages less index.html */
+	.blur-background-section-pages {
+		padding: 120px 40px;
+		min-height: 500px;
+	}
+
+	/* Programmes */
+
+	.programmes-wrap {
+		grid-template-columns: 1fr;
+		gap: 24px;
+		padding-top: 24px;
+	}
+
+	.programmes-title {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+
+	.programme-card {
+		width: 80%;
+		max-width: 600px;
+		padding: 20px 16px;
+		margin: 0 auto 32px;
+	}
+
+	.programme-name {
+		font-size: 18px;
+	}
+
+	.step,
+	.feature-list li {
+		font-size: 14px;
+	}
+
+	.step-icon {
+		width: 18px;
+		height: 18px;
+		font-size: 11px;
+	}
+
+	.programme-header .programme-meta {
+		font-size: 12px;
+	}
+
+	.programme-note p,
+	.programme-note .muted {
+		font-size: 14px;
+	}
+
+	/* Posibilidades */
+	.possibilities-title {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	.possibilities-grid {
+		gap: 24px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.possibility-card:last-child {
+		grid-column: 1 / -1;
+		justify-self: center;
+		max-width: 278px;
+	}
+
+	.possibility-card {
+		padding: 24px 16px;
+	}
+
+	.possibility-icon {
+		font-size: 1.8rem;
+	}
+
+	.possibility-heading {
+		font-size: 18px;
+		margin-bottom: 8px;
+	}
+
+	.possibility-text {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+
+
+	/* Timeline*/
+
+	.timeline-line {
+		left: 20px;
+		top: 60px;
+		bottom: 60px;
+	}
+
+	.timeline-icon {
+		left: 20px;
+		transform: translateX(-50%);
+	}
+
+	.timeline-content {
+		width: calc(100% - 70px);
+		margin-left: 60px;
+		text-align: left;
+		padding: 15px;
+	}
+
+	.timeline-content.left,
+	.timeline-content.right {
+		margin-left: 60px;
+		margin-right: 0;
+		text-align: left;
+	}
+
+	.timeline-content h3,
+	.timeline-content p {
+		text-align: left;
+	}
 
 	/*-----------------------------------------------------------------*/
 	/*  Contact Page
 /*-----------------------------------------------------------------*/
 
-	.blur-background-section-pages {
-		padding: 120px 40px;
-		min-height: 700px;
-	}
 
-	.hero-content h1 {
-		font-size: 3rem;
-	}
+
 }
 
 /*-----------------------------------------------------------------*/
@@ -3256,6 +3385,13 @@ button#contact-submit:hover {
 	.in-frame {
 		width: 170px;
 		height: 182px;
+	}
+
+	.notice {
+		position: absolute;
+		top: 35%;
+		right: 3%;
+		width: 100px;
 	}
 
 	/*-----------------------------------------------------------------*/
@@ -3553,8 +3689,9 @@ button#contact-submit:hover {
 		max-width: 80px;
 	}
 
+
 	/*-----------------------------------------------------------------*/
-	/*  Contact Page
+	/*  INDIVIDUAL
 /*-----------------------------------------------------------------*/
 
 	.blur-background-section-pages {
@@ -3566,6 +3703,191 @@ button#contact-submit:hover {
 		/* Opcional: reduce altura para pantallas pequeñas */
 		padding: 80px 15px;
 	}
+
+	/* Titulares */
+	.who-we-are h2,
+	.the-problem h2,
+	.programmes-section h2,
+	.possibilities-block h2,
+	.timeline-section h2 {
+		font-size: 20px;
+	}
+
+	/* Párrafos */
+	.who-we-are p,
+	.the-problem p,
+	.programmes-section p,
+	.possibilities-block p,
+	.timeline-section p,
+	.possibility-text,
+	.how-quote,
+	.footer p {
+		font-size: 14px;
+	}
+
+	/* Listas */
+	.the-problem__list li,
+	.feature-list li,
+	.steps li,
+	.timeline-content ul li,
+	ul li,
+	ol li {
+		font-size: 12px;
+	}
+
+	/* Secciones */
+	.who-we-are {
+		padding-bottom: 15px;
+	}
+
+	.blur-background-section-pages {
+		padding: 80px 20px;
+		min-height: 400px;
+	}
+
+	.the-problem__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		/* 1 columna */
+		gap: 16px;
+		/* separacion entre items */
+	}
+
+	.the-problem__image {
+		width: 100%;
+		height: auto;
+	}
+
+	.the-problem__media img {
+		width: 100%;
+		height: auto;
+		margin-top: 0px;
+
+	}
+
+	/* Programmes */
+	.programmes-wrap {
+		grid-template-columns: 1fr;
+		/* 1 card por fila */
+		gap: 16px;
+		padding-top: 16px;
+	}
+
+	.programmes-title {
+		font-size: 20px;
+	}
+
+	.programme-card {
+		width: 90%;
+		max-width: 100%;
+		padding: 16px 12px;
+		margin: 0 auto 24px;
+	}
+
+	.programme-name {
+		font-size: 16px;
+	}
+
+	.step,
+	.feature-list li {
+		font-size: 12px;
+	}
+
+	.step-icon {
+		width: 16px;
+		height: 16px;
+		font-size: 10px;
+	}
+
+	.programme-header .programme-meta {
+		font-size: 11px;
+	}
+
+	.programme-note p,
+	.programme-note .muted {
+		font-size: 12px;
+	}
+
+	/* Posibilidades */
+	.possibilities-title {
+		font-size: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.possibility-card {
+		padding: 16px 12px;
+	}
+
+	.possibility-icon {
+		font-size: 1.5rem;
+	}
+
+	.possibility-heading {
+		font-size: 16px;
+		margin-top: 15px;
+		margin-bottom: 6px;
+	}
+
+	.possibility-text {
+		font-size: 13px;
+		line-height: 1.4;
+	}
+
+	/* Timeline */
+	.timeline-section {
+		padding: 30px 10px;
+	}
+
+	.timeline-line {
+		left: 20px;
+		top: 20px;
+		bottom: 160px;
+	}
+
+	.timeline-step {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.timeline-icon {
+		position: relative;
+		left: auto;
+		transform: none;
+		margin-bottom: 8px;
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+	}
+
+	.timeline-content {
+		width: calc(100% - 40px);
+		margin-left: 40px;
+		padding: 12px;
+		text-align: left;
+	}
+
+	.timeline-content h3 {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
+	.timeline-content p {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+
+	.timeline-content.left,
+	.timeline-content.right {
+		margin-left: 40px;
+		margin-right: 0;
+		text-align: left;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/*  Contact Page
+/*-----------------------------------------------------------------*/
+
 
 	.contact-info {
 		justify-content: center;
@@ -3630,59 +3952,6 @@ button#contact-submit:hover {
 		padding: 10px;
 	}
 
-	/*-----------------------------------------------------------------*/
-	/* 06. Timeline
-/*-----------------------------------------------------------------*/
-	 
-	.timeline-section {
-		padding: 30px 10px;
-	}
-
-	.timeline-line {
-		left: 20px;
-		top: 20px;
-		bottom: 140px;
-	}
-
-	.timeline-step {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.timeline-icon {
-		position: relative;
-		left: auto;
-		transform: none;
-		margin-bottom: 8px;
-		width: 40px;
-		height: 40px;
-		font-size: 18px;
-	}
-
-	.timeline-content {
-		width: calc(100% - 40px);
-		margin-left: 40px;
-		padding: 12px;
-		text-align: left;
-	}
-
-	.timeline-content h3 {
-		font-size: 18px;
-		padding-bottom: 10px;
-	}
-
-	.timeline-content p {
-		font-size: 14px;
-		margin: 0 10px;
-	}
-
-	.timeline-content.left,
-	.timeline-content.right {
-		margin-left: 40px;
-		margin-right: 0;
-		text-align: left;
-	}
-	
 }
 
 
@@ -3733,6 +4002,14 @@ button#contact-submit:hover {
 		box-sizing: border-box;
 	}
 
+	.notice {
+		position: absolute;
+		top: 35%;
+		right: 3%;
+		width: 60px;
+		border-radius: 5px;
+	}
+
 	.section-text-card {
 		font-size: 12px;
 	}
@@ -3780,4 +4057,50 @@ button#contact-submit:hover {
 	.about-section-content h2 {
 		font-size: 18px;
 	}
+
+
+
+	/* INDIVIDUAL */
+
+	/* Programmes */
+    .programmes-wrap {
+        grid-template-columns: 1fr; /* 1 card por fila */
+        gap: 12px;
+        padding-top: 12px;
+    }
+
+    .programmes-title {
+        font-size: 18px;
+    }
+
+    .programme-card {
+        width: 95%;
+        max-width: 95%;
+        padding: 12px 10px;
+        margin: 0 auto 16px;
+    }
+
+    .programme-name {
+        font-size: 14px;
+    }
+
+    .step,
+    .feature-list li {
+        font-size: 11px;
+    }
+
+    .step-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+    }
+
+    .programme-header .programme-meta {
+        font-size: 10px;
+    }
+
+    .programme-note p,
+    .programme-note .muted {
+        font-size: 11px;
+    }
 }
