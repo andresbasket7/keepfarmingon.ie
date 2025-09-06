@@ -1594,6 +1594,10 @@ button#contact-submit:hover {
 	text-align: center;
 }
 
+.team-section .support {
+	font-size: 20px;
+}
+
 .team-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -1603,7 +1607,7 @@ button#contact-submit:hover {
 }
 
 .team-member {
-	max-width: 220px;
+	width: 180px;
 }
 
 .team-member img {
@@ -2178,7 +2182,6 @@ button#contact-submit:hover {
 	font-size: 16px;
 }
 
-.approach-text,
 .intro-text p {
 	margin-bottom: 20px;
 }
@@ -2283,17 +2286,10 @@ button#contact-submit:hover {
 	display: block;
 	max-width: 700px;
 	margin: 30px auto;
-	border-radius: 12px;
-	padding: 10px;
+	border-radius: 12px;	
 }
-
-
 
 /* OPTION */
-
-.options-section {
-	padding-top: 40px;
-}
 
 .options-container {
 	display: grid;
@@ -2305,7 +2301,12 @@ button#contact-submit:hover {
 	position: relative;
 }
 
+.options-section {
+	padding: 0px;
+}
+
 .options-section h2 {
+	padding-top: 40px;
 	font-size: 30px;
 	color: #2e572c;
 	font-weight: bold;
