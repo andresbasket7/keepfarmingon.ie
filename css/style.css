@@ -431,6 +431,17 @@ header {
 	max-width: 800px;
 }
 
+.hero-content2 {
+	color: #000;
+	max-width: 800px;
+}
+
+.hero-content2 h1 {
+	font-size: 28px;
+	margin-top: 100px;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 .hero-content h1 {
 	font-size: 48px;
 	margin-bottom: 20px;
@@ -490,6 +501,16 @@ header {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+.notice-text {
+	color: #ffeb3b;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+
+	/* 👇 estilos de "card" */
+	background: rgba(0, 0, 0, 0.6); /* fondo oscuro translúcido */
+	border-radius: 6px;
 }
 
 
@@ -1192,6 +1213,26 @@ header {
 }
 
 .blur-background-section-pages::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	z-index: 0;
+	opacity: 0.7;
+}
+
+/* Imagen de fondo borrosa */
+.blur-background-section-pages2 {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 100px 20px;
+	overflow: hidden;
+	min-height: 200px;
+}
+
+.blur-background-section-pages2::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -2722,6 +2763,24 @@ button#contact-submit:hover {
 	src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2") format("woff2"),
 		url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff") format("woff");
 }
+
+/*-----------------------------------------------------------------*/
+/* Privacy Policy */
+
+.privacy-policy-content {
+	padding-top: 0;
+}
+
+.privacy-policy-content h2 {
+    font-size: 26px;
+    color: #222;
+    text-align: left;
+    font-weight: 700;
+	padding: 20px 0px;
+	margin: 0 0;
+}
+
+
 
 
 /*-----------------------------------------------------------------*/
