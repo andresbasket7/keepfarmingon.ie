@@ -38,9 +38,11 @@
             <!-- LOGO IZQUIERDA -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/LOGO.png" alt="Keep Farming On Logo" />
+                    <img src="images/LOGO.png" alt="Keep Farming On Logo" width="414" height="147" />
                 </a>
             </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
             <!-- MENÚ DERECHA -->
             <nav class="main-nav">
@@ -122,7 +124,7 @@
 
         <section class="team-section">
             <h2><strong>Jim Buckley & Associates</strong></h2><br>
-            
+
             <h2 class="Advisory">Advisory board</h2>
             <div class="team-container">
 
@@ -262,29 +264,41 @@
 
     <!-- Footer -->
 
-   <footer class="footer">
-		<div class="footer-container">
-			<div class="footer-column">
-				<p><i class="fas fa-map-marker-alt"></i> <strong>Location</strong></p>
-				<p>Keepfarmingon<br>South Mall<br>Cork<br>Republic of Ireland</p>
-			</div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location</strong></p>
+                <p>Keepfarmingon<br>South Mall<br>Cork<br>Republic of Ireland</p>
+            </div>
 
 
-			<div class="footer-column">
-				<p><i class="fas fa-envelope"></i> Email: <a
-						href="mailto:info@keepfarmingon.ie">info@keepfarmingon.ie</a></p>
-				<p><i class="fas fa-phone"></i> Phone: 087 1655 555</p>
-				<p><i class="fas fa-clock"></i> Hours: Monday–Friday: 8am – 6pm <br>Telephone oncall: 9am - 10am</p>
-			</div>
+            <div class="footer-column">
+                <p><i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:info@keepfarmingon.ie">info@keepfarmingon.ie</a></p>
+                <p><i class="fas fa-phone"></i> Phone: 087 1655 555</p>
+                <p><i class="fas fa-clock"></i> Hours: Monday–Friday: 8am – 6pm <br>Telephone oncall: 9am - 10am</p>
+            </div>
 
-			<div class="footer-column">
-				<p><a href="#">Standards / Codes of Practice</a></p>
-				<p><a href="#">FAQ's</a></p>
-				<p><a href="Privacy.html">Privacy Policy</a></p>
-				<p>© 2025 - KeepFarmingOn</p>
-			</div>
-		</div>
-	</footer>
+            <div class="footer-column">
+                <p><a href="#">Standards / Codes of Practice</a></p>
+                <p><a href="#">FAQ's</a></p>
+                <p><a href="Privacy.html">Privacy Policy</a></p>
+                <p>© 2025 - KeepFarmingOn</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para el menu amburguesa -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const toggle = document.querySelector(".menu-toggle");
+			const nav = document.querySelector(".main-nav");
+
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("active");
+			});
+		});
+	</script>
 
 </body>
 

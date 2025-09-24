@@ -330,6 +330,17 @@ header {
 
 }
 
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+	display: none;
+	font-size: 28px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #333;
+	/* cambia color según diseño */
+}
+
 /* Menú alineado a la derecha */
 .main-nav ul {
 	display: flex;
@@ -493,8 +504,6 @@ header {
 	right: 3%;
 	width: 200px;
 	z-index: 5;
-	border-radius: 12px;
-	overflow: hidden;
 }
 
 .notice img {
@@ -502,14 +511,22 @@ header {
 	height: auto;
 	display: block;
 }
-.notice-text {
-	color: #ffeb3b;
-	font-size: 0.85rem;
-	font-weight: 800;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 
-	/* 👇 estilos de "card" */
-	background: rgba(0, 0, 0, 0.6); /* fondo oscuro translúcido */
+/* Texto independiente */
+.notice-text {
+	position: absolute;
+	top: calc(35% + 250px);
+	/* 250px = alto aprox del tablón */
+	right: 3%;
+	z-index: 10;
+	/* aseguramos que quede por encima */
+
+	color: #ffeb3b;
+	font-size: 2.5rem;
+	font-weight: 800;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.6);
+	padding: 8px 14px;
 	border-radius: 6px;
 }
 
@@ -2327,7 +2344,7 @@ button#contact-submit:hover {
 	display: block;
 	max-width: 700px;
 	margin: 30px auto;
-	border-radius: 12px;	
+	border-radius: 12px;
 }
 
 /* OPTION */
@@ -2772,10 +2789,10 @@ button#contact-submit:hover {
 }
 
 .privacy-policy-content h2 {
-    font-size: 26px;
-    color: #222;
-    text-align: left;
-    font-weight: 700;
+	font-size: 26px;
+	color: #222;
+	text-align: left;
+	font-weight: 700;
 	padding: 20px 0px;
 	margin: 0 0;
 }
@@ -2919,6 +2936,10 @@ button#contact-submit:hover {
 		top: 35%;
 		right: 3%;
 		width: 120px;
+	}
+	.notice-text {
+		top: calc(35% + 150px); /* ajusta según alto del tablón en tablet */
+		font-size: 1.8rem;
 	}
 
 
@@ -3354,67 +3375,89 @@ button#contact-submit:hover {
 		z-index: 10;
 		background-color: transparent;
 		padding: 6px 0;
-		/* Menos padding vertical */
 	}
 
+	/* contenedor en columna */
 	.header-container {
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
-		padding: 6px 6px 0 6px;
+		padding: 6px;
 	}
 
-	.logo {
-		margin-bottom: 6px;
-	}
-
+	/* logo */
 	.logo img {
 		max-height: 40px;
 	}
 
-	.main-nav {
-		width: 100%;
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-		scrollbar-width: none;
-		margin-top: 6px;
-		padding-bottom: 3px;
-	}
+	/* botón hamburguesa */
+	.menu-toggle {
+  display: block;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 30; /* siempre por encima del menú */
+  position: relative;
+}
 
-	.main-nav::-webkit-scrollbar {
-		display: none;
-	}
+/* menú oculto por defecto */
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 10px; /* pegado al lado derecho */
+  width: 200px; /* ancho fijo y elegante */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px 0;
+  z-index: 29;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
 
-	.main-nav ul {
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		padding: 0 0px;
-		align-items: stretch;
-		gap: 9px;
-		/* Reducir aún más el espacio entre elementos */
-		box-sizing: border-box;
-	}
+/* cuando tiene la clase active → aparece */
+.main-nav.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
-	.main-nav ul li {
-		flex-shrink: 0;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: auto;
-		min-width: 0;
-		padding: 0 2px;
-		/* Pequeño padding interno para los elementos del menú */
-	}
+/* lista de enlaces */
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-	.main-nav ul li a {
-		font-size: 9px;
-		padding: 1px 1px;
-		white-space: normal;
-		word-break: break-word;
-		line-height: 1.0;
-		display: block;
-	}
+.main-nav ul li {
+  padding: 0;
+}
 
+.main-nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav ul li a:active {
+  background-color: #f0f0f0;
+  color: #008C45;
+}
 	/*-----------------------------------------------------------------*/
 	/* 02. Hero
 /*-----------------------------------------------------------------*/
@@ -3472,6 +3515,12 @@ button#contact-submit:hover {
 		top: 35%;
 		right: 3%;
 		width: 100px;
+	}
+	.notice-text {
+		top: calc(35% + 180px); /* ajusta según alto del tablón en móvil */
+		font-size: 0.6rem;
+		right: 5%;  /* un poco más de margen en móvil */
+		
 	}
 
 	/*-----------------------------------------------------------------*/
@@ -4337,6 +4386,7 @@ button#contact-submit:hover {
 		width: 50px;
 		height: 50px;
 	}
+
 	.option-column img {
 		width: 80px;
 		/* before 200px */

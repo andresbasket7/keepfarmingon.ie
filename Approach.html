@@ -38,9 +38,11 @@
 			<!-- LOGO IZQUIERDA -->
 			<div class="logo">
 				<a href="index.html">
-					<img src="images/LOGO.png" alt="Keep Farming On Logo" />
+					<img src="images/LOGO.png" alt="Keep Farming On Logo" width="414" height="147" />
 				</a>
 			</div>
+
+			<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
 			<!-- MENÚ DERECHA -->
 			<nav class="main-nav">
@@ -184,7 +186,8 @@
 		<!-- Texto general debajo -->
 		<div class="options-text">
 			<p>
-				Behavioural research suggests that the most <strong>EFFECTIVE</strong> people are those who by using practical
+				Behavioural research suggests that the most <strong>EFFECTIVE</strong> people are those who by using
+				practical
 				psychometric assessments understand themselves, both strengths and weaknesses, so that they can develop
 				strategies to meet the demands and opportunities of their lives and workplaces.
 			</p>
@@ -225,6 +228,18 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Script para el menu amburguesa -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const toggle = document.querySelector(".menu-toggle");
+			const nav = document.querySelector(".main-nav");
+
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("active");
+			});
+		});
+	</script>
 
 </body>
 

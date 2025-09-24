@@ -39,9 +39,11 @@
 			<!-- LOGO IZQUIERDA -->
 			<div class="logo">
 				<a href="index.html">
-					<img src="images/LOGO.png" alt="Keep Farming On Logo" />
+					<img src="images/LOGO.png" alt="Keep Farming On Logo" width="414" height="147" />
 				</a>
 			</div>
+
+			<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
 			<!-- MENÚ DERECHA -->
 			<nav class="main-nav">
@@ -146,9 +148,11 @@
 								react</label><br>
 							<label><input type="checkbox" name="improvements[]" value="Be more confident"> Be more
 								confident</label><br>
-							<label><input type="checkbox" name="improvements[]" value="Decision making skills"> Be able to
+							<label><input type="checkbox" name="improvements[]" value="Decision making skills"> Be able
+								to
 								decide easily</label><br>
-							<label><input type="checkbox" name="improvements[]" value="Know more about your profile"> Know
+							<label><input type="checkbox" name="improvements[]" value="Know more about your profile">
+								Know
 								more about how people tick</label><br>
 							<label><input type="checkbox" name="improvements[]" value="Be more motivated"> Be more
 								motivated</label><br>
@@ -214,6 +218,17 @@
 	</footer>
 
 	<script src="js/form.js" async></script>
+	<!-- Script para el menu amburguesa -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const toggle = document.querySelector(".menu-toggle");
+			const nav = document.querySelector(".main-nav");
+
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("active");
+			});
+		});
+	</script>
 </body>
 
 </html>

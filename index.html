@@ -20,7 +20,7 @@
 	<!-- CSS -->
 	<link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</noscript>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 		media="print" onload="this.media='all'">
@@ -40,6 +40,8 @@
 					<img src="images/LOGO.png" alt="Keep Farming On Logo" width="414" height="147" />
 				</a>
 			</div>
+
+			<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
 			<!-- MENÚ DERECHA -->
 			<nav class="main-nav">
@@ -68,11 +70,13 @@
 		</div>
 
 		<div class="notice">
-			<span class="notice-text">Website - work in progress</span>
 			<a href="Approach.html">
 				<img src="images/noticeboard.webp" alt="Notice Bard">
-			</a>	
+			</a>
 		</div>
+
+		<div class="notice-text">Website - work in progress</div>
+
 
 		<!-- <div class="hero-overlay">
 			<div class="hero-content">
@@ -438,6 +442,17 @@
 	<script src="js/hero.js" defer></script>
 	<script src="js/change.js" defer></script>
 	<!-- <script src="js/slider.js"></script> -->
+	<!-- Script para el menu amburguesa -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const toggle = document.querySelector(".menu-toggle");
+			const nav = document.querySelector(".main-nav");
+
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("active");
+			});
+		});
+	</script>
 </body>
 
 </html>

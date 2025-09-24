@@ -38,9 +38,11 @@
 			<!-- LOGO IZQUIERDA -->
 			<div class="logo">
 				<a href="index.html">
-					<img src="images/LOGO.png" alt="Keep Farming On Logo" />
+					<img src="images/LOGO.png" alt="Keep Farming On Logo" width="414" height="147" />
 				</a>
 			</div>
+
+			<button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
 			<!-- MENÚ DERECHA -->
 			<nav class="main-nav">
@@ -193,6 +195,17 @@
 		</div>
 	</footer>
 	<script src="js/FAQ.js"></script>
+	<!-- Script para el menu amburguesa -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const toggle = document.querySelector(".menu-toggle");
+			const nav = document.querySelector(".main-nav");
+
+			toggle.addEventListener("click", () => {
+				nav.classList.toggle("active");
+			});
+		});
+	</script>
 </body>
 
 </html>
